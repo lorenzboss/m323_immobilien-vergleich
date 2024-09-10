@@ -1,0 +1,2487 @@
+[
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "719362"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "138233"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "346354"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "581285"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "812620"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1075317"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "512301"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "455317"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "568800"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "510687"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "350479"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "421274"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "551296"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "711549"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "573391"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "212600"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "498786"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "603913"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "734567"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "443028"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "329692"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "537150"
+  },
+  {
+    "jahr": "2011",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "767693"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "227800"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "431245"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "594376"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "848536"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1059829"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "652882"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "629000"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "627824"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "764167"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "517446"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "159530"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "349140"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "395997"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "574295"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "791768"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "547492"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "198750"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "418101"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "651970"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "610550"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "522385"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "503500"
+  },
+  {
+    "jahr": "2012",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "806493"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "140975"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "361984"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "639178"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "862202"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1315014"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "564393"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "367000"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "448727"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "605767"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "803000"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "505617"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "215000"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "390393"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "493497"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "517022"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "704817"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "715797"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "300955"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "551071"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "795782"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1025600"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "475289"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "296440"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "463000"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "542589"
+  },
+  {
+    "jahr": "2013",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "852199"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "256667"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "449759"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "671567"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "931694"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1205059"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "610016"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "450266"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "668400"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "745000"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "687434"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "177667"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "260667"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "516762"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "723250"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "882208"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "560783"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "140000"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "192190"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "456659"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "646444"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "913125"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "522710"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "381222"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "594650"
+  },
+  {
+    "jahr": "2014",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "779777"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "234500"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "501134"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "611014"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "910124"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1026545"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "561245"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "347500"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "572545"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "720233"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "621593"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "202500"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "390429"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "534580"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "698085"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "856833"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "730851"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "475000"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "532668"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "727014"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "908729"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "591554"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "511167"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "597323"
+  },
+  {
+    "jahr": "2015",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "784000"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "843344"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "225000"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "504113"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "732072"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "909051"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1278254"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "543062"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "172693"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "479889"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "713580"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "681820"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "633233"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "431000"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "599303"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "646426"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "823455"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "662000"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "443356"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "646571"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "729231"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "772279"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "585665"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "424800"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "597147"
+  },
+  {
+    "jahr": "2016",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "894464"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "267333"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "538398"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "732856"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "993172"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1280007"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "591569"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "463280"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "535000"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "687400"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "855403"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "669699"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "532000"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "535652"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "737923"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "811467"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "679997"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "613594"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "726766"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "902600"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "532138"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "381286"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "479136"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "564045"
+  },
+  {
+    "jahr": "2017",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "605000"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "924779"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "491133"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "747994"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1024264"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1406650"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "594682"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "502556"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "635430"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "696220"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "163333"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "419833"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "477022"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "811791"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "932647"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "630553"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "434818"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "494158"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "694457"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "911250"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "542230"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "348333"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "495700"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "560047"
+  },
+  {
+    "jahr": "2018",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "626889"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "931931"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "398600"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "529910"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "768500"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1025432"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1399948"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "543961"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "470000"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "475945"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "596083"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "686659"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "446083"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "561291"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "782794"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "930824"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "645172"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "477333"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "662415"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "664788"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "710958"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "486560"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "406667"
+  },
+  {
+    "jahr": "2019",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "522513"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "937135"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "427700"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "567302"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "742673"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1018303"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1376060"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "564951"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "439700"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "540693"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "600211"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "622500"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "706714"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "378000"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "527148"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "806185"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "921333"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "742663"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "606652"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "782038"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "956923"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "547316"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "421667"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "596333"
+  },
+  {
+    "jahr": "2020",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "737333"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "989364"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "338333"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "539468"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "780973"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1080496"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1418235"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "654788"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "436667"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "616129"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "701240"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "833750"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "669864"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "187200"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "424583"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "571716"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "771876"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "910238"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "722640"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "374600"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "605648"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "701238"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1012135"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "646410"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "599556"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "683178"
+  },
+  {
+    "jahr": "2021",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "786667"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "1118170"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "432500"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "592012"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "876622"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1231471"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1689501"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "727940"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "497600"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "646278"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "766485"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "912547"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "791027"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "243124"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "496236"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "671737"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "866338"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1142063"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "750012"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "294750"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "590250"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "739496"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "730687"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "939467"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "481750"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "( )"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "461118"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "490667"
+  },
+  {
+    "jahr": "2022",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "650000"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "1061224"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "232415"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "609722"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "876671"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "1162445"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1301",
+    "bezirk": "Bezirk Arlesheim",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1493819"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "761653"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "330060"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "590938"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "847424"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1302",
+    "bezirk": "Bezirk Laufen",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1175833"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "851692"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "1",
+    "verkaufspreis_chf": "491667"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "648750"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "620795"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "868970"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1303",
+    "bezirk": "Bezirk Liestal",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "1172190"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "756676"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "478891"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "695647"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "866702"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1304",
+    "bezirk": "Bezirk Sissach",
+    "zimmerzahl": "5+",
+    "verkaufspreis_chf": "989770"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "Total",
+    "verkaufspreis_chf": "647016"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "2",
+    "verkaufspreis_chf": "405600"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "3",
+    "verkaufspreis_chf": "547657"
+  },
+  {
+    "jahr": "2023",
+    "bezirk_nummer": "1305",
+    "bezirk": "Bezirk Waldenburg",
+    "zimmerzahl": "4",
+    "verkaufspreis_chf": "723120"
+  }
+]
