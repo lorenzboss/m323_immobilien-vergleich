@@ -28,7 +28,7 @@ public class TestFunctions {
     // Kompakte Ausgaben der Immobilien
     public static void immobilienAusgebenKompakt(List<Immobilien> immobilienList) {
         System.out.println("\n\n");
-        System.out.println("Alle Immobilien");
+        System.out.println("Alle Immobilien in kompakter Form");
         immobilienList.forEach(immobilien -> System.out.printf("%d %-10s %-9s %7d%n",
                 immobilien.getJahr(), immobilien.getBezirk(), immobilien.getZimmerzahl(), immobilien.getVerkaufspreisChf()));
     }
