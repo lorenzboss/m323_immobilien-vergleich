@@ -1,6 +1,6 @@
 import java.io.IOException;
 import java.util.List;
-import logic.Functional;
+import logic.functional.*;
 import properties.JsonToProperties;
 import properties.Property;
 import properties.enums.Rooms;
@@ -10,26 +10,26 @@ public class Main {
   public static void main(String[] args) throws IOException {
     final List<Property> propertyList = JsonToProperties.convertJsonToProperties("dataset.json");
 
-    Functional.printProperties(propertyList, 10);
-    Functional.printPropertiesCompact(propertyList, 10);
+    PrintProperties.printProperties(propertyList, 10);
+    PrintProperties.printPropertiesCompact(propertyList, 10);
 
-    Functional.numberOfSales(propertyList);
-    Functional.numberOfSalesPerDistrict(propertyList);
-    Functional.numberOfSalesPerYear(propertyList);
-    Functional.numberOfSalesPerYearRooms(propertyList);
-    Functional.numberOfSalesPerYearDistrict(propertyList);
+    NumberOfSales.numberOfSales(propertyList);
+    NumberOfSales.numberOfSalesPerDistrict(propertyList);
+    NumberOfSales.numberOfSalesPerYear(propertyList);
+    NumberOfSales.numberOfSalesPerYearRooms(propertyList);
+    NumberOfSales.numberOfSalesPerYearDistrict(propertyList);
 
-    Functional.mostExpensivePropertiesPrice(propertyList, 15);
-    Functional.mostExpensiveProperties(propertyList, 15);
+    HighestPrice.mostExpensivePropertiesPrice(propertyList, 15);
+    HighestPrice.mostExpensiveProperties(propertyList, 15);
 
-    Functional.averagePricePerNumberOfRooms(propertyList);
-    Functional.averagePricePerYear(propertyList, Rooms.ONE);
-    Functional.averagePricePerYearDistrict(propertyList);
+    AveragePrice.averagePricePerNumberOfRooms(propertyList);
+    AveragePrice.averagePricePerYear(propertyList, Rooms.ONE);
+    AveragePrice.averagePricePerYearDistrict(propertyList);
 
-    Functional.priceDifferencePerYear(propertyList, Rooms.FIVE_PLUS, Rooms.ONE);
-    Functional.priceDifferencePerDistrict(propertyList, Rooms.FIVE_PLUS, Rooms.ONE);
+    PriceDifference.priceDifferencePerYear(propertyList, Rooms.FIVE_PLUS, Rooms.ONE);
+    PriceDifference.priceDifferencePerDistrict(propertyList, Rooms.FIVE_PLUS, Rooms.ONE);
 
-    Functional.priceDevelopmentPerDistrict(propertyList, 2012, 2023);
-    Functional.priceDevelopmentPerNumberOfRooms(propertyList, 2012, 2023);
+    PriceDevelopment.priceDevelopmentPerDistrict(propertyList, 2012, 2023);
+    PriceDevelopment.priceDevelopmentPerNumberOfRooms(propertyList, 2012, 2023);
   }
 }
