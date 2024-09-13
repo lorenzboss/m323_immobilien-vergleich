@@ -20,10 +20,10 @@ public class Functional {
         .limit(limit != null ? limit : propertyList.size())
         .forEach(
                 property -> {
-              System.out.println("Year:     " + property.getYear());
-              System.out.println("District: " + property.getDistrict());
-              System.out.println("Rooms:    " + property.getRooms());
-              System.out.println("Price:    " + property.getPrice());
+              System.out.println("Year:     " + property.year());
+              System.out.println("District: " + property.district());
+              System.out.println("Rooms:    " + property.rooms());
+              System.out.println("Price:    " + property.price());
               System.out.println();
             });
   }
@@ -41,10 +41,10 @@ public class Functional {
                 property ->
                 System.out.printf(
                     "%d %-10s %-9s %7d%n",
-                    property.getYear(),
-                    property.getDistrict(),
-                    property.getRooms(),
-                    property.getPrice()));
+                    property.year(),
+                    property.district(),
+                    property.rooms(),
+                    property.price()));
   }
 
   // --------------------------------- Sales ---------------------------------
@@ -58,7 +58,7 @@ public class Functional {
     System.out.println("\n\n");
     System.out.println("Number of sales per district: ");
     propertyList.stream()
-        .collect(Collectors.groupingBy(Property::getDistrict, Collectors.counting()))
+        .collect(Collectors.groupingBy(Property::district, Collectors.counting()))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
@@ -72,7 +72,7 @@ public class Functional {
     System.out.println("\n\n");
     System.out.println("Number of sales per year: ");
     propertyList.stream()
-        .collect(Collectors.groupingBy(Property::getYear, Collectors.counting()))
+        .collect(Collectors.groupingBy(Property::year, Collectors.counting()))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByKey())
@@ -89,8 +89,8 @@ public class Functional {
         propertyList.stream()
             .collect(
                 Collectors.groupingBy(
-                    Property::getYear,
-                    Collectors.groupingBy(Property::getRooms, Collectors.counting())));
+                    Property::year,
+                    Collectors.groupingBy(Property::rooms, Collectors.counting())));
 
     // Print header row
     System.out.print("Year");
@@ -125,8 +125,8 @@ public class Functional {
         propertyList.stream()
             .collect(
                 Collectors.groupingBy(
-                    Property::getYear,
-                    Collectors.groupingBy(Property::getDistrict, Collectors.counting())));
+                    Property::year,
+                    Collectors.groupingBy(Property::district, Collectors.counting())));
 
     final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
     final Set<District> districts = new TreeSet<>();
@@ -162,7 +162,7 @@ public class Functional {
     System.out.println("\n\n");
     System.out.println("The price of the most expensive properties");
     propertyList.stream()
-        .map(Property::getPrice)
+        .map(Property::price)
         .filter(Objects::nonNull)
         .sorted(Comparator.reverseOrder())
         .limit(limit)
@@ -177,8 +177,8 @@ public class Functional {
     System.out.println("\n\n");
     System.out.println("The most expensive properties");
     propertyList.stream()
-        .filter(property -> property.getPrice() != null)
-        .sorted(Comparator.comparing(Property::getPrice).reversed())
+        .filter(property -> property.price() != null)
+        .sorted(Comparator.comparing(Property::price).reversed())
         .limit(limit)
         .toList()
         .forEach(
@@ -186,10 +186,10 @@ public class Functional {
                 System.out.printf(
                     "%3d: year: %d, district: %10s, rooms: %9s, price CHF: %d%n",
                     index.getAndIncrement(),
-                    property.getYear(),
-                    property.getDistrict(),
-                    property.getRooms(),
-                    property.getPrice()));
+                    property.year(),
+                    property.district(),
+                    property.rooms(),
+                    property.price()));
   }
 
   // --------------------------------- Average Price ---------------------------------
@@ -198,10 +198,10 @@ public class Functional {
     System.out.println("\n\n");
     System.out.println("Average price per number of rooms");
     propertyList.stream()
-        .filter(property -> property.getPrice() != null)
+        .filter(property -> property.price() != null)
         .collect(
             Collectors.groupingBy(
-                Property::getRooms, Collectors.averagingInt(Property::getPrice)))
+                Property::rooms, Collectors.averagingInt(Property::price)))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
@@ -215,11 +215,11 @@ public class Functional {
     System.out.println("average price per year for " + rooms + " room properties");
 
     propertyList.stream()
-        .filter(property -> property.getRooms() == rooms)
-        .filter(property -> property.getPrice() != null)
+        .filter(property -> property.rooms() == rooms)
+        .filter(property -> property.price() != null)
         .collect(
             Collectors.groupingBy(
-                Property::getYear, Collectors.averagingInt(Property::getPrice)))
+                Property::year, Collectors.averagingInt(Property::price)))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue())
@@ -237,12 +237,12 @@ public class Functional {
 
     final Map<Integer, Map<District, Double>> salesPerYearDistrict =
         propertyList.stream()
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getYear,
+                    Property::year,
                     Collectors.groupingBy(
-                        Property::getDistrict, Collectors.averagingInt(Property::getPrice))));
+                        Property::district, Collectors.averagingInt(Property::price))));
 
     final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
     final Set<District> districts = new TreeSet<>();
@@ -280,19 +280,19 @@ public class Functional {
 
     Map<Integer, Double> averageA =
         propertyList.stream()
-            .filter(property -> property.getRooms() == roomsA)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.rooms() == roomsA)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getYear, Collectors.averagingInt(Property::getPrice)));
+                    Property::year, Collectors.averagingInt(Property::price)));
 
     Map<Integer, Double> averageB =
         propertyList.stream()
-            .filter(property -> property.getRooms() == roomsB)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.rooms() == roomsB)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getYear, Collectors.averagingInt(Property::getPrice)));
+                    Property::year, Collectors.averagingInt(Property::price)));
 
     Set<Integer> years = new TreeSet<>(averageA.keySet());
     years.addAll(averageB.keySet());
@@ -313,19 +313,19 @@ public class Functional {
 
     Map<District, Double> averageA =
         propertyList.stream()
-            .filter(property -> property.getRooms() == roomsA)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.rooms() == roomsA)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
+                    Property::district, Collectors.averagingInt(Property::price)));
 
     Map<District, Double> averageB =
         propertyList.stream()
-            .filter(property -> property.getRooms() == roomsB)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.rooms() == roomsB)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
+                    Property::district, Collectors.averagingInt(Property::price)));
 
     Set<District> districts = new TreeSet<>(averageA.keySet());
     districts.addAll(averageB.keySet());
@@ -358,18 +358,18 @@ public class Functional {
 
     Map<District, Double> priceA =
         propertyList.stream()
-            .filter(property -> property.getYear() == yearA)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.year() == yearA)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
+                    Property::district, Collectors.averagingInt(Property::price)));
     Map<District, Double> priceB =
         propertyList.stream()
-            .filter(property -> property.getYear() == yearB)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.year() == yearB)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
+                    Property::district, Collectors.averagingInt(Property::price)));
 
     Set<District> districts = new TreeSet<>(priceA.keySet());
     districts.addAll(priceB.keySet());
@@ -403,18 +403,18 @@ public class Functional {
 
     Map<Rooms, Double> priceA =
         propertyList.stream()
-            .filter(property -> property.getYear() == yearA)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.year() == yearA)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getRooms, Collectors.averagingInt(Property::getPrice)));
+                    Property::rooms, Collectors.averagingInt(Property::price)));
     Map<Rooms, Double> priceB =
         propertyList.stream()
-            .filter(property -> property.getYear() == yearB)
-            .filter(property -> property.getPrice() != null)
+            .filter(property -> property.year() == yearB)
+            .filter(property -> property.price() != null)
             .collect(
                 Collectors.groupingBy(
-                    Property::getRooms, Collectors.averagingInt(Property::getPrice)));
+                    Property::rooms, Collectors.averagingInt(Property::price)));
 
     Set<Rooms> numberOfRooms = new TreeSet<>(priceA.keySet());
     numberOfRooms.addAll(priceB.keySet());
