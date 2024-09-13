@@ -15,14 +15,14 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class JsonToProperties {
-    public static List<Properties> convertJsonToProperties(String filePath) throws IOException {
+    public static List<Property> convertJsonToProperties(String filePath) throws IOException {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(District.class, new DistrictDeserializer());
         gsonBuilder.registerTypeAdapter(Rooms.class, new RoomsDeserializer());
         gsonBuilder.registerTypeAdapter(Integer.class, new PriceDeserializer());
         Gson gson = gsonBuilder.create();
 
-        Type listType = new TypeToken<List<Properties>>() {
+        Type listType = new TypeToken<List<Property>>() {
         }.getType();
 
         try (FileReader reader = new FileReader(filePath)) {

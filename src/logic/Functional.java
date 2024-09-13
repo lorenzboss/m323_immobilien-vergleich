@@ -1,6 +1,6 @@
 package logic;
 
-import properties.Properties;
+import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 import java.util.*;
@@ -10,103 +10,95 @@ import java.util.stream.Stream;
 
 public class Functional {
 
-  // --------------------------------- Ausgaben ---------------------------------
+  // --------------------------------- Printing ---------------------------------
 
-  // Ausgabe der Ergebnisse
-  public static void immobilienAusgeben(List<Properties> propertiesList, Integer limit) {
+  public static void printProperties(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(
-        limit == null ? "Alle Immobilien:" : String.format("Die ersten %d Immobilien", limit));
-    propertiesList.stream()
-        .limit(limit != null ? limit : propertiesList.size())
+        limit == null ? "All properties:" : String.format("The first %d properties", limit));
+    propertyList.stream()
+        .limit(limit != null ? limit : propertyList.size())
         .forEach(
-                properties -> {
-              System.out.println("Jahr:              " + properties.getYear());
-              System.out.println("Bezirk Nummer:     " + properties.getDistrictNumber());
-              System.out.println("Bezirk:            " + properties.getDistrict());
-              System.out.println("Zimmerzahl:        " + properties.getRooms());
-              System.out.println("Verkaufspreis CHF: " + properties.getPrice());
+                property -> {
+              System.out.println("Year:     " + property.getYear());
+              System.out.println("District: " + property.getDistrict());
+              System.out.println("Rooms:    " + property.getRooms());
+              System.out.println("Price:    " + property.getPrice());
               System.out.println();
             });
   }
 
-  // Kompakte Ausgaben der Immobilien
-  public static void immobilienAusgebenKompakt(List<Properties> propertiesList, Integer limit) {
+  public static void printPropertiesCompact(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(
         limit == null
-            ? "Alle Immobilien in kompakter Form"
-            : String.format("Die ersten %d Immobilien in kompakter Form:", limit));
+            ? "All properties in compact form:"
+            : String.format("The first %d properties in compact form:", limit));
 
-    propertiesList.stream()
-        .limit(limit != null ? limit : propertiesList.size())
+    propertyList.stream()
+        .limit(limit != null ? limit : propertyList.size())
         .forEach(
-                properties ->
+                property ->
                 System.out.printf(
                     "%d %-10s %-9s %7d%n",
-                    properties.getYear(),
-                    properties.getDistrict(),
-                    properties.getRooms(),
-                    properties.getPrice()));
+                    property.getYear(),
+                    property.getDistrict(),
+                    property.getRooms(),
+                    property.getPrice()));
   }
 
-  // --------------------------------- Verkäufe ---------------------------------
+  // --------------------------------- Sales ---------------------------------
 
-  // Anzahl der verkauften Immobilien
-  public static void anzahlVerkäufe(List<Properties> propertiesList) {
+  public static void numberOfSales(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Anzahl der verkauften Immobilien: " + propertiesList.size());
+    System.out.println("Number of properties sold: " + propertyList.size());
   }
 
-  // Anzahl der verkauften Immobilien pro Bezirk sortiert nach Anzahl
-  public static void anzahlVerkäufeProBezirk(List<Properties> propertiesList) {
+  public static void numberOfSalesPerDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Anzahl der Immobilien pro Bezirk sortiert nach Anzahl");
-    propertiesList.stream()
-        .collect(Collectors.groupingBy(Properties::getDistrict, Collectors.counting()))
+    System.out.println("Number of sales per district: ");
+    propertyList.stream()
+        .collect(Collectors.groupingBy(Property::getDistrict, Collectors.counting()))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .forEach(
             entry ->
-                System.out.printf("Bezirk: %-10s Anzahl: %d%n", entry.getKey(), entry.getValue()));
+                System.out.printf(
+                    "District: %-10s Sales: %d%n", entry.getKey(), entry.getValue()));
   }
 
-  // Anzahl der verkauften Immobilien pro Jahr sortiert nach Jahr
-  public static void anzahlVerkäufeProJahr(List<Properties> propertiesList) {
+  public static void numberOfSalesPerYear(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Anzahl der verkauften Immobilien pro Jahr");
-    propertiesList.stream()
-        .collect(Collectors.groupingBy(Properties::getYear, Collectors.counting()))
+    System.out.println("Number of sales per year: ");
+    propertyList.stream()
+        .collect(Collectors.groupingBy(Property::getYear, Collectors.counting()))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByKey())
         .forEach(
             entry ->
-                System.out.printf(
-                    "%d, Verkauften Immobilien: %d%n", entry.getKey(), entry.getValue()));
+                System.out.printf("%d: Sold properties: %d%n", entry.getKey(), entry.getValue()));
   }
 
-  // Anzahl der verschiedenen Arten der verkauften Immobilien pro Jahr
-  public static void anzahlVerkäufeProJahrZimmerzahl(List<Properties> propertiesList) {
+  public static void numberOfSalesPerYearRooms(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println(
-        "Anzahl der verschiedenen Arten der verkauften Immobilien pro Jahr und Zimmerzahl");
+    System.out.println("Number of sales per year and number of rooms: ");
 
     Map<Integer, Map<Rooms, Long>> data =
-        propertiesList.stream()
+        propertyList.stream()
             .collect(
                 Collectors.groupingBy(
-                    Properties::getYear,
-                    Collectors.groupingBy(Properties::getRooms, Collectors.counting())));
+                    Property::getYear,
+                    Collectors.groupingBy(Property::getRooms, Collectors.counting())));
 
     // Print header row
-    System.out.print("Jahr");
+    System.out.print("Year");
     data.values().stream()
         .flatMap(map -> map.keySet().stream())
         .distinct()
         .sorted()
-        .forEach(zimmerzahl -> System.out.printf("%11s", zimmerzahl));
+        .forEach(rooms -> System.out.printf("%11s", rooms));
     System.out.println();
 
     // Print each row
@@ -120,127 +112,114 @@ public class Functional {
                   .distinct()
                   .sorted()
                   .forEach(
-                      zimmerzahl ->
-                          System.out.printf("%11d", entry.getValue().getOrDefault(zimmerzahl, 0L)));
+                      rooms -> System.out.printf("%11d", entry.getValue().getOrDefault(rooms, 0L)));
               System.out.println();
             });
   }
 
-  // Gesamtzahl der Verkäufe pro Jahr und Bezirk
-  public static void anzahlVerkäufeProJahrBezirk(List<Properties> propertiesList) {
+  public static void numberOfSalesPerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Gesamtzahl der Verkäufe pro Jahr und Bezirk");
+    System.out.println("Number of sales per year and district: ");
 
-    final Map<Integer, Map<District, Long>> verkäufeProJahrUndBezirk =
-        propertiesList.stream()
+    final Map<Integer, Map<District, Long>> salesPerYearDistrict =
+        propertyList.stream()
             .collect(
                 Collectors.groupingBy(
-                    Properties::getYear,
-                    Collectors.groupingBy(Properties::getDistrict, Collectors.counting())));
+                    Property::getYear,
+                    Collectors.groupingBy(Property::getDistrict, Collectors.counting())));
 
-    // Ermitteln der einzigartigen Jahre und Bezirke
-    final Set<Integer> jahre = new TreeSet<>(verkäufeProJahrUndBezirk.keySet());
-    final Set<District> bezirke = new TreeSet<>();
-    verkäufeProJahrUndBezirk.values().forEach(map -> bezirke.addAll(map.keySet()));
+    final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
+    final Set<District> districts = new TreeSet<>();
+    salesPerYearDistrict.values().forEach(map -> districts.addAll(map.keySet()));
 
-    // Erstellen der Tabelle als Liste von Strings
     Stream.concat(
             Stream.of(
-                "Jahr"
-                    + bezirke.stream()
+                "Year"
+                    + districts.stream()
                         .map(district -> String.format("%12s", district))
                         .collect(Collectors.joining())),
-            jahre.stream()
+            years.stream()
                 .map(
-                    jahr ->
-                        String.format("%4d", jahr)
-                            + bezirke.stream()
+                    year ->
+                        String.format("%4d", year)
+                            + districts.stream()
                                 .map(
-                                        district ->
+                                    district ->
                                         String.format(
                                             "%12d",
-                                            verkäufeProJahrUndBezirk
-                                                .getOrDefault(jahr, Collections.emptyMap())
+                                            salesPerYearDistrict
+                                                .getOrDefault(year, Collections.emptyMap())
                                                 .getOrDefault(district, 0L)))
                                 .collect(Collectors.joining())))
         .toList()
         .forEach(System.out::println);
   }
 
-  // --------------------------------- Preise ---------------------------------
+  // --------------------------------- Price ---------------------------------
 
-  // Berechnung des Verkaufspreises der zehn teuersten immobilien
-  public static void teuersteImmobilienPreis(List<Properties> propertiesList, int anzahl) {
+  public static void mostExpensivePropertiesPrice(List<Property> propertyList, int limit) {
     AtomicInteger index = new AtomicInteger(1);
     System.out.println("\n\n");
-    System.out.println("Der Verkaufspreis der zehn teuersten Immobilien");
-    propertiesList.stream()
-        .map(Properties::getPrice)
+    System.out.println("The price of the most expensive properties");
+    propertyList.stream()
+        .map(Property::getPrice)
         .filter(Objects::nonNull)
         .sorted(Comparator.reverseOrder())
-        .limit(anzahl)
+        .limit(limit)
         .toList()
         .forEach(
-            preis ->
-                System.out.printf("%3d: Verkaufspreis CHF: %d%n", index.getAndIncrement(), preis));
+            price ->
+                System.out.printf("%3d: selling price CHF: %d%n", index.getAndIncrement(), price));
   }
 
-  // Berechnung der zehn teuersten Immobilien
-  public static void teuersteImmobilien(List<Properties> propertiesList, int anzahl) {
+  public static void mostExpensiveProperties(List<Property> propertyList, int limit) {
     AtomicInteger index = new AtomicInteger(1);
     System.out.println("\n\n");
-    System.out.println("Die zehn teuersten Immobilien");
-    propertiesList.stream()
-        .filter(properties -> properties.getPrice() != null)
-        .sorted(Comparator.comparing(Properties::getPrice).reversed())
-        .limit(anzahl)
+    System.out.println("The most expensive properties");
+    propertyList.stream()
+        .filter(property -> property.getPrice() != null)
+        .sorted(Comparator.comparing(Property::getPrice).reversed())
+        .limit(limit)
         .toList()
         .forEach(
-            immobilie ->
+            property ->
                 System.out.printf(
-                    "%3d: Jahr: %d, Bezirk: %10s, Zimmerzahl: %9s, Verkaufspreis CHF: %d%n",
+                    "%3d: year: %d, district: %10s, rooms: %9s, price CHF: %d%n",
                     index.getAndIncrement(),
-                    immobilie.getYear(),
-                    immobilie.getDistrict(),
-                    immobilie.getRooms(),
-                    immobilie.getPrice()));
+                    property.getYear(),
+                    property.getDistrict(),
+                    property.getRooms(),
+                    property.getPrice()));
   }
 
-  // --------------------------------- Durchschnittspreise ---------------------------------
+  // --------------------------------- Average Price ---------------------------------
 
-  // Durchschnittspreis pro Zimmer sortiert nach Preis
-  public static void durchschnittsPreisProZimmer(List<Properties> propertiesList) {
+  public static void averagePricePerNumberOfRooms(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Durchschnittspreis pro Zimmer");
-    propertiesList.stream()
-        .filter(properties -> properties.getPrice() != null)
+    System.out.println("Average price per number of rooms");
+    propertyList.stream()
+        .filter(property -> property.getPrice() != null)
         .collect(
             Collectors.groupingBy(
-                Properties::getRooms,
-                Collectors.averagingInt(Properties::getPrice)))
+                Property::getRooms, Collectors.averagingInt(Property::getPrice)))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .forEach(
             entry ->
-                System.out.printf(
-                    "Zimmeranzahl: %10s, Durchschnittspreis: %f%n",
-                    entry.getKey(), entry.getValue()));
+                System.out.printf("Rooms: %10s, price: %f%n", entry.getKey(), entry.getValue()));
   }
 
-  // Durchschnittsverkaufspreis pro Jahr für eine bestimmte Zimmerzahl sortiert nach Jahr
-  public static void durchschnittsPreisProJahr(
-          List<Properties> propertiesList, Rooms rooms) {
+  public static void averagePricePerYear(List<Property> propertyList, Rooms rooms) {
     System.out.println("\n\n");
-    System.out.println(
-        "Durchschnittsverkaufspreis pro Jahr für " + rooms + " Zimmer-Wohnungen");
+    System.out.println("average price per year for " + rooms + " room properties");
 
-    propertiesList.stream()
-        .filter(properties -> properties.getRooms() == rooms)
-        .filter(properties -> properties.getPrice() != null)
+    propertyList.stream()
+        .filter(property -> property.getRooms() == rooms)
+        .filter(property -> property.getPrice() != null)
         .collect(
             Collectors.groupingBy(
-                Properties::getYear, Collectors.averagingInt(Properties::getPrice)))
+                Property::getYear, Collectors.averagingInt(Property::getPrice)))
         .entrySet()
         .stream()
         .sorted(Map.Entry.comparingByValue())
@@ -248,220 +227,162 @@ public class Functional {
         .forEach(
             integerDoubleEntry ->
                 System.out.printf(
-                    "Jahr: %d, Durchschnittsverkaufspreis: %f%n",
+                    "year: %d, average price: %f%n",
                     integerDoubleEntry.getKey(), integerDoubleEntry.getValue()));
   }
 
-  // Durchschnittsverkaufspreis pro Jahr und Bezirk sortiert nach Jahr
-  public static void durchschnittspreisProJahrBezirk(List<Properties> propertiesList) {
+  public static void averagePricePerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Durchschnittsverkaufspreis pro Jahr und Bezirk");
+    System.out.println("Average price per year and district");
 
-    // Sammeln der Daten in einer verschachtelten Map
-    final Map<Integer, Map<District, Double>> verkäufeProJahrUndBezirk =
-        propertiesList.stream()
-            .filter(properties -> properties.getPrice() != null)
+    final Map<Integer, Map<District, Double>> salesPerYearDistrict =
+        propertyList.stream()
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getYear,
+                    Property::getYear,
                     Collectors.groupingBy(
-                        Properties::getDistrict,
-                        Collectors.averagingInt(Properties::getPrice))));
+                        Property::getDistrict, Collectors.averagingInt(Property::getPrice))));
 
-    // Ermitteln der einzigartigen Jahre und Bezirke
-    final Set<Integer> jahre = new TreeSet<>(verkäufeProJahrUndBezirk.keySet());
-    final Set<District> bezirke = new TreeSet<>();
-    verkäufeProJahrUndBezirk.values().forEach(map -> bezirke.addAll(map.keySet()));
+    final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
+    final Set<District> districts = new TreeSet<>();
+    salesPerYearDistrict.values().forEach(map -> districts.addAll(map.keySet()));
 
-    // Erstellen der Tabelle als Liste von Strings
     Stream.concat(
             Stream.of(
-                "Jahr"
-                    + bezirke.stream()
+                "year"
+                    + districts.stream()
                         .map(district -> String.format("%12s", district))
                         .collect(Collectors.joining())),
-            jahre.stream()
+            years.stream()
                 .map(
-                    jahr ->
-                        String.format("%4d", jahr)
-                            + bezirke.stream()
+                    year ->
+                        String.format("%4d", year)
+                            + districts.stream()
                                 .map(
-                                        district ->
+                                    district ->
                                         String.format(
                                             "%12.2f",
-                                            verkäufeProJahrUndBezirk
-                                                .getOrDefault(jahr, Collections.emptyMap())
+                                            salesPerYearDistrict
+                                                .getOrDefault(year, Collections.emptyMap())
                                                 .getOrDefault(district, 0.0)))
                                 .collect(Collectors.joining())))
         .toList()
         .forEach(System.out::println);
   }
 
-  // --------------------------------- Preisdifferenzen ---------------------------------
+  // --------------------------------- Price Difference ---------------------------------
 
-  // Preisdifferenz pro Jahr zwischen zwei Zimmerzahlen sortiert nach Jahr
-  public static void preisDifferenzProJahr(
-          List<Properties> propertiesList, Rooms roomsA, Rooms roomsB) {
+  public static void priceDifferencePerYear(
+          List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");
-    System.out.println("Preisdifferenz pro Jahr zwischen " + roomsA + " und " + roomsB);
+    System.out.println("Price difference per year between " + roomsA + " and " + roomsB);
 
-    Map<Integer, Double> durchschnittA =
-        propertiesList.stream()
-            .filter(properties -> properties.getRooms() == roomsA)
-            .filter(properties -> properties.getPrice() != null)
+    Map<Integer, Double> averageA =
+        propertyList.stream()
+            .filter(property -> property.getRooms() == roomsA)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getYear, Collectors.averagingInt(Properties::getPrice)));
+                    Property::getYear, Collectors.averagingInt(Property::getPrice)));
 
-    Map<Integer, Double> durchschnittB =
-        propertiesList.stream()
-            .filter(properties -> properties.getRooms() == roomsB)
-            .filter(properties -> properties.getPrice() != null)
+    Map<Integer, Double> averageB =
+        propertyList.stream()
+            .filter(property -> property.getRooms() == roomsB)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getYear, Collectors.averagingInt(Properties::getPrice)));
+                    Property::getYear, Collectors.averagingInt(Property::getPrice)));
 
-    Set<Integer> jahre = new TreeSet<>(durchschnittA.keySet());
-    jahre.addAll(durchschnittB.keySet());
+    Set<Integer> years = new TreeSet<>(averageA.keySet());
+    years.addAll(averageB.keySet());
 
-    jahre.forEach(
-        jahr -> {
-          Double preisA = durchschnittA.getOrDefault(jahr, 0.0);
-          Double preisB = durchschnittB.getOrDefault(jahr, 0.0);
-          Double differenz = preisA - preisB;
-          System.out.printf("Jahr: %d, Preisdifferenz: %9.2f%n", jahr, differenz);
+    years.forEach(
+        year -> {
+          Double priceA = averageA.getOrDefault(year, 0.0);
+          Double priceB = averageB.getOrDefault(year, 0.0);
+          Double difference = priceA - priceB;
+          System.out.printf("Year: %d, Price difference: %9.2f%n", year, difference);
         });
   }
 
-  // Preisdifferenz pro Jahr zwischen zwei Zimmerzahlen sortiert nach Preis
-  public static void preisDifferenzProBezirk(
-          List<Properties> propertiesList, Rooms roomsA, Rooms roomsB) {
+  public static void priceDifferencePerDistrict(
+          List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");
-    System.out.println("Preisdifferenz pro Jahr zwischen " + roomsA + " und " + roomsB);
+    System.out.println("Price difference per year between " + roomsA + " and " + roomsB);
 
-    Map<District, Double> durchschnittA =
-        propertiesList.stream()
-            .filter(properties -> properties.getRooms() == roomsA)
-            .filter(properties -> properties.getPrice() != null)
+    Map<District, Double> averageA =
+        propertyList.stream()
+            .filter(property -> property.getRooms() == roomsA)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getDistrict,
-                    Collectors.averagingInt(Properties::getPrice)));
+                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
 
-    Map<District, Double> durchschnittB =
-        propertiesList.stream()
-            .filter(properties -> properties.getRooms() == roomsB)
-            .filter(properties -> properties.getPrice() != null)
+    Map<District, Double> averageB =
+        propertyList.stream()
+            .filter(property -> property.getRooms() == roomsB)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getDistrict,
-                    Collectors.averagingInt(Properties::getPrice)));
+                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
 
-    Set<District> bezirke = new TreeSet<>(durchschnittA.keySet());
-    bezirke.addAll(durchschnittB.keySet());
+    Set<District> districts = new TreeSet<>(averageA.keySet());
+    districts.addAll(averageB.keySet());
 
-    Map<District, Double> durchschnitt =
-        bezirke.stream()
+    Map<District, Double> average =
+        districts.stream()
             .collect(
                 Collectors.toMap(
-                        district -> district,
-                        district ->
-                        durchschnittA.getOrDefault(district, 0.0)
-                            - durchschnittB.getOrDefault(district, 0.0)));
-
-    durchschnitt.entrySet().stream()
-        .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-        .forEach(
-            entry ->
-                System.out.printf(
-                    "Bezirk: %10s, Preisdifferenz: %10.2f%n", entry.getKey(), entry.getValue()));
-  }
-
-  // --------------------------------- Preisentwicklung ---------------------------------
-
-  // Preisentwicklung in Prozent pro Bezirk zwischen zwei Jahren sortiert nach Preisentwicklung
-  public static void preisEntwicklungProBezirk(
-          List<Properties> propertiesList, int jahrA, int jahrB) {
-    System.out.println("\n\n");
-    System.out.println(
-        "Preisentwicklung in Prozent pro Bezirk zwischen " + jahrA + " und " + jahrB);
-
-    Map<District, Double> preisA =
-        propertiesList.stream()
-            .filter(properties -> properties.getYear() == jahrA)
-            .filter(properties -> properties.getPrice() != null)
-            .collect(
-                Collectors.groupingBy(
-                    Properties::getDistrict,
-                    Collectors.averagingInt(Properties::getPrice)));
-    Map<District, Double> preisB =
-        propertiesList.stream()
-            .filter(properties -> properties.getYear() == jahrB)
-            .filter(properties -> properties.getPrice() != null)
-            .collect(
-                Collectors.groupingBy(
-                    Properties::getDistrict,
-                    Collectors.averagingInt(Properties::getPrice)));
-
-    Set<District> bezirke = new TreeSet<>(preisA.keySet());
-    bezirke.addAll(preisB.keySet());
-
-    bezirke.stream()
-        .collect(
-            Collectors.toMap(
                     district -> district,
-                    district -> {
-                  Double preisAValue = preisA.getOrDefault(district, 0.0);
-                  Double preisBValue = preisB.getOrDefault(district, 0.0);
-                  return preisAValue != 0.0 && preisBValue != 0.0
-                      ? (preisBValue - preisAValue) / preisAValue * 100
-                      : 0.0;
-                }))
-        .entrySet()
-        .stream()
+                    district ->
+                        averageA.getOrDefault(district, 0.0)
+                            - averageB.getOrDefault(district, 0.0)));
+
+    average.entrySet().stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .forEach(
             entry ->
                 System.out.printf(
-                    "Bezirk: %10s, Preisentwicklung: %6.2f%%%n", entry.getKey(), entry.getValue()));
+                    "District: %10s, Price Difference: %10.2f%n",
+                    entry.getKey(), entry.getValue()));
   }
 
-    // Preisentwicklung in Prozent pro Zimmerzahl zwischen zwei Jahren sortiert nach Preisentwicklung
-  public static void preisEntwicklungProZimmerzahl(
-          List<Properties> propertiesList, int jahrA, int jahrB) {
+  // --------------------------------- Price Development ---------------------------------
+
+  public static void priceDevelopmentPerDistrict(
+          List<Property> propertyList, int yearA, int yearB) {
     System.out.println("\n\n");
     System.out.println(
-        "Preisentwicklung in Prozent pro Zimmerzahl zwischen " + jahrA + " und " + jahrB);
+        "Price development in percent per district between " + yearA + " and " + yearB);
 
-    Map<Rooms, Double> preisA =
-        propertiesList.stream()
-            .filter(properties -> properties.getYear() == jahrA)
-            .filter(properties -> properties.getPrice() != null)
+    Map<District, Double> priceA =
+        propertyList.stream()
+            .filter(property -> property.getYear() == yearA)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getRooms,
-                    Collectors.averagingInt(Properties::getPrice)));
-    Map<Rooms, Double> preisB =
-        propertiesList.stream()
-            .filter(properties -> properties.getYear() == jahrB)
-            .filter(properties -> properties.getPrice() != null)
+                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
+    Map<District, Double> priceB =
+        propertyList.stream()
+            .filter(property -> property.getYear() == yearB)
+            .filter(property -> property.getPrice() != null)
             .collect(
                 Collectors.groupingBy(
-                    Properties::getRooms,
-                    Collectors.averagingInt(Properties::getPrice)));
+                    Property::getDistrict, Collectors.averagingInt(Property::getPrice)));
 
-    Set<Rooms> zimmerzahlen = new TreeSet<>(preisA.keySet());
-    zimmerzahlen.addAll(preisB.keySet());
+    Set<District> districts = new TreeSet<>(priceA.keySet());
+    districts.addAll(priceB.keySet());
 
-    zimmerzahlen.stream()
+    districts.stream()
         .collect(
             Collectors.toMap(
-                zimmerzahl -> zimmerzahl,
-                zimmerzahl -> {
-                  Double preisAValue = preisA.getOrDefault(zimmerzahl, 0.0);
-                  Double preisBValue = preisB.getOrDefault(zimmerzahl, 0.0);
-                  return preisAValue != 0.0 && preisBValue != 0.0
-                      ? (preisBValue - preisAValue) / preisAValue * 100
+                district -> district,
+                district -> {
+                  Double priceAValue = priceA.getOrDefault(district, 0.0);
+                  Double priceBValue = priceB.getOrDefault(district, 0.0);
+                  return priceAValue != 0.0 && priceBValue != 0.0
+                      ? (priceBValue - priceAValue) / priceAValue * 100
                       : 0.0;
                 }))
         .entrySet()
@@ -470,7 +391,51 @@ public class Functional {
         .forEach(
             entry ->
                 System.out.printf(
-                    "Zimmerzahl: %10s, Preisentwicklung: %6.2f%%%n",
+                    "District: %10s, Price development: %6.2f%%%n",
                     entry.getKey(), entry.getValue()));
+  }
+
+  public static void priceDevelopmentPerNumberOfRooms(
+          List<Property> propertyList, int yearA, int yearB) {
+    System.out.println("\n\n");
+    System.out.println(
+        "Price development in percent per number of rooms between " + yearA + " und " + yearB);
+
+    Map<Rooms, Double> priceA =
+        propertyList.stream()
+            .filter(property -> property.getYear() == yearA)
+            .filter(property -> property.getPrice() != null)
+            .collect(
+                Collectors.groupingBy(
+                    Property::getRooms, Collectors.averagingInt(Property::getPrice)));
+    Map<Rooms, Double> priceB =
+        propertyList.stream()
+            .filter(property -> property.getYear() == yearB)
+            .filter(property -> property.getPrice() != null)
+            .collect(
+                Collectors.groupingBy(
+                    Property::getRooms, Collectors.averagingInt(Property::getPrice)));
+
+    Set<Rooms> numberOfRooms = new TreeSet<>(priceA.keySet());
+    numberOfRooms.addAll(priceB.keySet());
+
+    numberOfRooms.stream()
+        .collect(
+            Collectors.toMap(
+                rooms -> rooms,
+                rooms -> {
+                  Double priceAValue = priceA.getOrDefault(rooms, 0.0);
+                  Double priceBValue = priceB.getOrDefault(rooms, 0.0);
+                  return priceAValue != 0.0 && priceBValue != 0.0
+                      ? (priceBValue - priceAValue) / priceAValue * 100
+                      : 0.0;
+                }))
+        .entrySet()
+        .stream()
+        .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+        .forEach(
+            entry ->
+                System.out.printf(
+                    "Rooms: %10s, Price development: %6.2f%%%n", entry.getKey(), entry.getValue()));
   }
 }
