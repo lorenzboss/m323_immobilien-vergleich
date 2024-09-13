@@ -7,7 +7,7 @@ import com.google.gson.JsonParseException;
 
 import java.lang.reflect.Type;
 
-public class VerkaufspreisDeserializer implements JsonDeserializer<Integer> {
+public class PriceDeserializer implements JsonDeserializer<Integer> {
     @Override
     public Integer deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         String jsonString = json.getAsString().trim();

@@ -1,6 +1,6 @@
-import immobilien.Immobilien;
-import immobilien.JsonToImmobilien;
-import immobilien.enums.Zimmerzahl;
+import properties.Properties;
+import properties.JsonToProperties;
+import properties.enums.Rooms;
 import logic.Functional;
 
 import java.io.IOException;
@@ -10,28 +10,28 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        final List<Immobilien> immobilienList = JsonToImmobilien.convertJsonToImmobilien("dataset.json");
+        final List<Properties> propertiesList = JsonToProperties.convertJsonToProperties("dataset.json");
 
-        Functional.immobilienAusgeben(immobilienList, 10);
-        Functional.immobilienAusgebenKompakt(immobilienList, 10);
+        Functional.immobilienAusgeben(propertiesList, 10);
+        Functional.immobilienAusgebenKompakt(propertiesList, 10);
 
-        Functional.anzahlVerkäufe(immobilienList);
-        Functional.anzahlVerkäufeProBezirk(immobilienList);
-        Functional.anzahlVerkäufeProJahr(immobilienList);
-        Functional.anzahlVerkäufeProJahrZimmerzahl(immobilienList);
-        Functional.anzahlVerkäufeProJahrBezirk(immobilienList);
+        Functional.anzahlVerkäufe(propertiesList);
+        Functional.anzahlVerkäufeProBezirk(propertiesList);
+        Functional.anzahlVerkäufeProJahr(propertiesList);
+        Functional.anzahlVerkäufeProJahrZimmerzahl(propertiesList);
+        Functional.anzahlVerkäufeProJahrBezirk(propertiesList);
 
-        Functional.teuersteImmobilienPreis(immobilienList, 15);
-        Functional.teuersteImmobilien(immobilienList, 15);
+        Functional.teuersteImmobilienPreis(propertiesList, 15);
+        Functional.teuersteImmobilien(propertiesList, 15);
 
-        Functional.durchschnittsPreisProZimmer(immobilienList);
-        Functional.durchschnittsPreisProJahr(immobilienList, Zimmerzahl.EINS);
-        Functional.durchschnittspreisProJahrBezirk(immobilienList);
+        Functional.durchschnittsPreisProZimmer(propertiesList);
+        Functional.durchschnittsPreisProJahr(propertiesList, Rooms.ONE);
+        Functional.durchschnittspreisProJahrBezirk(propertiesList);
 
-        Functional.preisDifferenzProJahr(immobilienList, Zimmerzahl.FÜNF_PLUS, Zimmerzahl.EINS);
-        Functional.preisDifferenzProBezirk(immobilienList, Zimmerzahl.FÜNF_PLUS, Zimmerzahl.EINS);
+        Functional.preisDifferenzProJahr(propertiesList, Rooms.FIVE_PLUS, Rooms.ONE);
+        Functional.preisDifferenzProBezirk(propertiesList, Rooms.FIVE_PLUS, Rooms.ONE);
 
-        Functional.preisEntwicklungProBezirk(immobilienList, 2012, 2023);
-        Functional.preisEntwicklungProZimmerzahl(immobilienList, 2012, 2023);
+        Functional.preisEntwicklungProBezirk(propertiesList, 2012, 2023);
+        Functional.preisEntwicklungProZimmerzahl(propertiesList, 2012, 2023);
     }
 }

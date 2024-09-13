@@ -1,5 +1,5 @@
-package immobilien.enums;
+package properties.enums;
 
-public enum Bezirk {
+public enum District {
     LAUFEN, LIESTAL, SISSACH, WALDENBURG, ARLESHEIM
 }
