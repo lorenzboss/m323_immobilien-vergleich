@@ -3,9 +3,9 @@ package properties;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import deserializers.DistrictDeserializer;
-import deserializers.PriceDeserializer;
-import deserializers.RoomsDeserializer;
+import properties.deserializers.DistrictDeserializer;
+import properties.deserializers.PriceDeserializer;
+import properties.deserializers.RoomsDeserializer;
 import properties.enums.District;
 import properties.enums.Rooms;
 
