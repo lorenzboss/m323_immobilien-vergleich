@@ -160,4 +160,8 @@ public class NumberOfSales {
       System.out.println();
     }
   }
-}
+
+  public static void numberOfSalesPerRooms(List<Property> propertyList) {
+    // TODO: Implement this method
+  }
+  }

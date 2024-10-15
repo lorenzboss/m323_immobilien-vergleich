@@ -1,12 +1,11 @@
 package logic.functional;
 
-import properties.Property;
-import properties.enums.District;
-import properties.enums.Rooms;
-
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import properties.Property;
+import properties.enums.District;
+import properties.enums.Rooms;
 
 public class NumberOfSales {
   public static void numberOfSales(List<Property> propertyList) {
@@ -25,6 +24,20 @@ public class NumberOfSales {
         .forEach(
             entry ->
                 System.out.printf("District: %-10s Sales: %d%n", entry.getKey(), entry.getValue()));
+  }
+
+  public static void numberOfSalesPerRooms(List<Property> propertyList) {
+    System.out.println("\n\n");
+    System.out.println("Number of sales per rooms: ");
+
+    propertyList.stream()
+        .collect(Collectors.groupingBy(Property::rooms, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .sorted(Map.Entry.comparingByKey(Comparator.comparingInt(Rooms::getSortOrder)))
+        .forEach(
+            entry ->
+                System.out.printf("Rooms: %-10s Sales: %d%n", entry.getKey(), entry.getValue()));
   }
 
   public static void numberOfSalesPerYear(List<Property> propertyList) {
