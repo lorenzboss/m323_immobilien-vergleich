@@ -112,4 +112,8 @@ public class NumberOfSales {
         .toList()
         .forEach(System.out::println);
   }
-}
+
+  public static void numberOfSalesPerRooms(List<Property> propertyList) {
+    // TODO: Implement this method
+  }
+  }
