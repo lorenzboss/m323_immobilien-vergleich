@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Scanner;
 import properties.Property;
 
+import static userInteraction.HelperMethods.askForInt;
+import static userInteraction.HelperMethods.askForLogicOption;
+
 public class ConsoleApplication {
 
   private static final Scanner scanner = new Scanner(System.in);
 
   public static void start(List<Property> propertyList) {
-    LogicOption logicOption;
 
     System.out.println("Welcome to the Property Comparator!");
     System.out.println("We have " + propertyList.size() + " properties in our database.");
@@ -19,44 +21,26 @@ public class ConsoleApplication {
     System.out.println("f - functional");
     System.out.println("i - imperative");
 
-    while (true) {
-      System.out.print("Please select an option: ");
-      char userInput = scanner.next().charAt(0);
+    LogicOption logicOption = askForLogicOption();
 
-      if (userInput == 'f') {
-        logicOption = LogicOption.FUNCTIONAL;
-        System.out.println("You have selected the functional logic.\n");
-        break;
-      } else if (userInput == 'i') {
-        logicOption = LogicOption.IMPERATIVE;
-        System.out.println("You have selected the imperative logic.\n");
-        break;
-      } else {
-        System.out.println("Invalid option\n");
-      }
-    }
     handleOptionEnum(logicOption, propertyList);
   }
 
   private static void handleOptionEnum(LogicOption logicOption, List<Property> propertyList) {
-    System.out.println("1. Print all properties");
-    System.out.println("2. Print the number of sales");
-    System.out.println("3. Print the most expensive properties");
-    System.out.println("4. Print the average price of the properties");
-    System.out.println(
-        "5. Print the price difference of the properties between two number of rooms");
-    System.out.println("6. Print the price development of the properties between two years");
-
     while (true) {
-      System.out.print("Please select an option: ");
-      int userInput = scanner.nextInt();
+      System.out.println("1. Print all properties");
+      System.out.println("2. Print the number of sales");
+      System.out.println("3. Print the most expensive properties");
+      System.out.println("4. Print the average price of the properties");
+      System.out.println(
+          "5. Print the price difference of the properties between two number of rooms");
+      System.out.println("6. Print the price development of the properties between two years");
+      System.out.println("7. Exit the program");
 
-      if (userInput > 0 && userInput <= 6) {
-        handleOption(userInput, propertyList, logicOption);
-        break;
-      } else {
-        System.out.println("Invalid option\n");
-      }
+      int userInput = askForInt("Please select an option: ", 7);
+      handleOption(userInput, propertyList, logicOption);
+      System.out.print("Press enter to continue...");
+      scanner.nextLine();
     }
   }
 
@@ -80,6 +64,10 @@ public class ConsoleApplication {
         break;
       case 6:
         PrintPriceDevelopment.start(propertyList, logicOption);
+        break;
+      case 7:
+        System.out.println("Exiting the program...");
+        System.exit(0);
         break;
       default:
         System.out.println("Invalid option\n");
