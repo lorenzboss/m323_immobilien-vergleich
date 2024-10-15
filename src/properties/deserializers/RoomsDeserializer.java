@@ -14,7 +14,7 @@ public class RoomsDeserializer implements JsonDeserializer<Rooms> {
         String value = json.getAsString();
         return switch (value) {
             case "1" -> Rooms.ONE;
-            case "2" -> Rooms.ZWO;
+            case "2" -> Rooms.TWO;
             case "3" -> Rooms.THREE;
             case "4" -> Rooms.FOUR;
             case "5+" -> Rooms.FIVE_PLUS;
