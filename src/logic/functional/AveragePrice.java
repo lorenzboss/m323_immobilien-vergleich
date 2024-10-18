@@ -23,12 +23,11 @@ public class AveragePrice {
                 System.out.printf("Rooms: %10s, price: %f%n", entry.getKey(), entry.getValue()));
   }
 
-  public static void averagePricePerYear(List<Property> propertyList, Rooms rooms) {
+  public static void averagePricePerYear(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Average price per year for " + rooms + " room properties");
+    System.out.println("Average price per year for properties.");
 
     propertyList.stream()
-        .filter(property -> property.rooms() == rooms)
         .filter(property -> property.price() != null)
         .collect(Collectors.groupingBy(Property::year, Collectors.averagingInt(Property::price)))
         .entrySet()

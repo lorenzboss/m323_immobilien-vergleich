@@ -89,9 +89,9 @@ public class AveragePrice {
     }
   }
 
-  public static void averagePricePerYear(List<Property> propertyList, Rooms rooms) {
+  public static void averagePricePerYear(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Average price per year for " + rooms + " room properties");
+    System.out.println("Average price per year for properties");
 
     int startYear = 2011; // Startjahr
     int endYear = 2022;   // Endjahr
@@ -100,7 +100,7 @@ public class AveragePrice {
 
     // Schleife durch die Liste der Immobilien
     for (Property property : propertyList) {
-      if (property.rooms() == rooms && property.price() != null) {
+      if (property.price() != null) {
         int year = property.year();
 
         // Gesamtsumme und Zähler für das Jahr aktualisieren, nur wenn das Jahr im gültigen Bereich liegt
