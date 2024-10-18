@@ -37,7 +37,7 @@ public class ConsoleApplication {
       System.out.println("6. Print the price development of the properties between two years");
       System.out.println("7. Exit the program");
 
-      int userInput = askForInt("Please select an option: ", 7);
+      int userInput = askForInt("Please select an option: ", 7,1);
       handleOption(userInput, propertyList, logicOption);
       System.out.print("Press enter to continue...");
       scanner.nextLine();

@@ -10,7 +10,7 @@ public class PrintHighestPrice {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     boolean priceOnly =
         askYesNoQuestion("Do you only want to print out the price of the properties? (y/n): ");
-    int limit = askForInt("How many properties do you want to print:", propertyList.size());
+    int limit = askForInt("How many properties do you want to print: ", propertyList.size(), 1);
 
     printHighestPrice(propertyList, logicOption, priceOnly, limit);
   }

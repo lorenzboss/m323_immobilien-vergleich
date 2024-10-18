@@ -12,7 +12,7 @@ public class PrintProperties {
     boolean compactForm =
         askYesNoQuestion("Do you want to print the properties in a compact form? (y/n): ");
     boolean setLimit = askYesNoQuestion("Do you want to set a limit? (y/n): ");
-    Integer limit = setLimit ? askForInt("Please enter the limit:", propertyList.size()) : null;
+    Integer limit = setLimit ? askForInt("Please enter the limit: ", propertyList.size(), 1) : null;
 
     printProperties(propertyList, logicOption, compactForm, limit);
   }
