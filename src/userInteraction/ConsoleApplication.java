@@ -49,7 +49,7 @@ public class ConsoleApplication {
       int option, List<Property> propertyList, LogicOption logicOption) {
     switch (option) {
       case 1:
-        PrintProperties.start(propertyList, logicOption);
+        PrintPropertiesInfo.start(propertyList, logicOption);
         break;
       case 2:
         PrintNumberOfSales.start(propertyList, logicOption);

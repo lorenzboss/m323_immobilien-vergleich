@@ -7,7 +7,7 @@ import java.util.List;
 import properties.Property;
 import userInteraction.LogicOption;
 
-public class PrintProperties {
+public class PrintPropertiesInfo {
 
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     boolean compactForm =
@@ -15,33 +15,33 @@ public class PrintProperties {
     boolean setLimit = askYesNoQuestion("Do you want to set a limit? (y/n): ");
     Integer limit = setLimit ? askForInt("Please enter the limit: ", propertyList.size(), 1) : null;
 
-    printProperties(propertyList, logicOption, compactForm, limit);
+    printPropertiesInfo(propertyList, logicOption, compactForm, limit);
   }
 
-  private static void printProperties(
+  private static void printPropertiesInfo(
       List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
     if (compactForm) {
-      printPropertiesCompactForm(propertyList, logicOption, compactForm, limit);
+      printPropertiesInfoCompactForm(propertyList, logicOption, compactForm, limit);
     } else {
-      printPropertiesNormalForm(propertyList, logicOption, compactForm, limit);
+      printPropertiesInfoForm(propertyList, logicOption, compactForm, limit);
     }
   }
 
-  private static void printPropertiesCompactForm(
+  private static void printPropertiesInfoCompactForm(
       List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
     if (logicOption == LogicOption.FUNCTIONAL) {
-      logic.functional.PrintProperties.printPropertiesCompact(propertyList, limit);
+      logic.functional.PropertiesInfo.propertiesInfoCompact(propertyList, limit);
     } else {
-      logic.imperative.PrintProperties.printPropertiesCompact(propertyList, limit);
+      logic.imperative.PropertiesInfo.propertiesInfoCompact(propertyList, limit);
     }
   }
 
-  private static void printPropertiesNormalForm(
+  private static void printPropertiesInfoForm(
       List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
     if (logicOption == LogicOption.FUNCTIONAL) {
-      logic.functional.PrintProperties.printProperties(propertyList, limit);
+      logic.functional.PropertiesInfo.propertiesInfo(propertyList, limit);
     } else {
-      logic.imperative.PrintProperties.printProperties(propertyList, limit);
+      logic.imperative.PropertiesInfo.propertiesInfo(propertyList, limit);
     }
   }
 }
