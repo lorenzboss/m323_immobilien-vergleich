@@ -1,9 +1,10 @@
-package userInteraction;
+package userInteraction.printMethods;
 
 import java.util.*;
 
 import properties.Property;
 import properties.enums.Rooms;
+import userInteraction.LogicOption;
 
 import static userInteraction.HelperMethods.*;
 

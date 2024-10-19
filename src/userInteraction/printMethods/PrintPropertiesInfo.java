@@ -1,10 +1,11 @@
-package userInteraction;
+package userInteraction.printMethods;
 
 import static userInteraction.HelperMethods.askForInt;
 import static userInteraction.HelperMethods.askYesNoQuestion;
 
 import java.util.List;
 import properties.Property;
+import userInteraction.LogicOption;
 
 public class PrintProperties {
 

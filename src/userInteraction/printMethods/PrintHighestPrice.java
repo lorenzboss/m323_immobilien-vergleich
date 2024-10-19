@@ -1,10 +1,11 @@
-package userInteraction;
+package userInteraction.printMethods;
 
 import static userInteraction.HelperMethods.askForInt;
 import static userInteraction.HelperMethods.askYesNoQuestion;
 
 import java.util.List;
 import properties.Property;
+import userInteraction.LogicOption;
 
 public class PrintHighestPrice {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
