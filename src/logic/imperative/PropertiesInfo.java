@@ -4,8 +4,8 @@ import properties.Property;
 
 import java.util.List;
 
-public class PrintProperties {
-    public static void printProperties(List<Property> propertyList, Integer limit) {
+public class PropertiesInfo {
+    public static void propertiesInfo(List<Property> propertyList, Integer limit) {
         System.out.println("\n\n");
 
         if (limit == null) {
@@ -27,7 +27,7 @@ public class PrintProperties {
         }
     }
 
-    public static void printPropertiesCompact(List<Property> propertyList, Integer limit) {
+    public static void propertiesInfoCompact(List<Property> propertyList, Integer limit) {
         int name = 5;
         System.out.println("\n\n");
 

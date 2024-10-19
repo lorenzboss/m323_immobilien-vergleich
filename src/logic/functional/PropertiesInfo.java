@@ -3,8 +3,8 @@ package logic.functional;
 import java.util.List;
 import properties.Property;
 
-public class PrintProperties {
-  public static void printProperties(List<Property> propertyList, Integer limit) {
+public class PropertiesInfo {
+  public static void propertiesInfo(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(
         limit == null ? "All properties:" : String.format("The first %d properties", limit));
@@ -20,7 +20,7 @@ public class PrintProperties {
             });
   }
 
-  public static void printPropertiesCompact(List<Property> propertyList, Integer limit) {
+  public static void propertiesInfoCompact(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(
         limit == null
