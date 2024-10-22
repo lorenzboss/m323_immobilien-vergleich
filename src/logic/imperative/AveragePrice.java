@@ -1,127 +1,70 @@
 package logic.imperative;
 
+import java.util.*;
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class AveragePrice {
+
   public static void averagePricePerNumberOfRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per number of rooms");
 
-    double oneRoomTotal = 0;
-    int oneRoomCount = 0;
-    double twoRoomTotal = 0;
-    int twoRoomCount = 0;
-    double threeRoomTotal = 0;
-    int threeRoomCount = 0;
-    double fourRoomTotal = 0;
-    int fourRoomCount = 0;
-    double fiveRoomTotal = 0;
-    int fiveRoomCount = 0;
-    double totalRoomTotal = 0;
-    int totalRoomCount = 0;
+    // Eine Map zur Speicherung der Gesamtsummen und Zählungen der Preise pro Zimmeranzahl
+    Map<Rooms, Double> totalPriceMap = new HashMap<>();
+    Map<Rooms, Integer> countMap = new HashMap<>();
 
-    // Schleife durch die Liste der Immobilien
-    for (int i = 0; i < propertyList.size(); i++) {
-      Property property = propertyList.get(i);
-
+    // Iteriere durch die Properties, um die Preise zu summieren und die Zählungen zu erhöhen
+    for (Property property : propertyList) {
       if (property.price() != null) {
-        switch (property.rooms()) {
-          case ONE -> {
-            oneRoomTotal += property.price();
-            oneRoomCount++;
-          }
-          case TWO -> {
-            twoRoomTotal += property.price();
-            twoRoomCount++;
-          }
-          case THREE -> {
-            threeRoomTotal += property.price();
-            threeRoomCount++;
-          }
-          case FOUR -> {
-            fourRoomTotal += property.price();
-            fourRoomCount++;
-          }
-          case FIVE_PLUS -> {
-            fiveRoomTotal += property.price();
-            fiveRoomCount++;
-          }
-          case TOTAL -> {
-            totalRoomTotal += property.price();
-            totalRoomCount++;
-          }
-        }
+        Rooms rooms = property.rooms();
+        totalPriceMap.put(rooms, totalPriceMap.getOrDefault(rooms, 0.0) + property.price());
+        countMap.put(rooms, countMap.getOrDefault(rooms, 0) + 1);
       }
     }
 
-    double averagePrice = 0;
-    System.out.println("\nAverage price per number of rooms");
+    // Berechne den Durchschnitt und speichere die Ergebnisse in einer Liste
+    List<Map.Entry<Rooms, Double>> averagePriceList = new ArrayList<>();
+    for (Rooms rooms : totalPriceMap.keySet()) {
+      double averagePrice = totalPriceMap.get(rooms) / countMap.get(rooms);
+      averagePriceList.add(new AbstractMap.SimpleEntry<>(rooms, averagePrice));
+    }
 
-    if (fiveRoomCount > 0) {
-      averagePrice = fiveRoomTotal / fiveRoomCount;
-      System.out.printf("Rooms: FIVE_PLUS, price: %.2f\n", averagePrice);
-    }
-    if (fourRoomCount > 0) {
-      averagePrice = fourRoomTotal / fourRoomCount;
-      System.out.printf("Rooms:      FOUR, price: %.2f\n", averagePrice);
-    }
-    if (totalRoomCount > 0) {
-      averagePrice = totalRoomTotal / totalRoomCount;
-      System.out.printf("Rooms:    TOTAL, price: %.2f\n", averagePrice);
-    }
-    if (threeRoomCount > 0) {
-      averagePrice = threeRoomTotal / threeRoomCount;
-      System.out.printf("Rooms:     THREE, price: %.2f\n", averagePrice);
-    }
-    if (twoRoomCount > 0) {
-      averagePrice = twoRoomTotal / twoRoomCount;
-      System.out.printf("Rooms:       TWO, price: %.2f\n", averagePrice);
-    }
-    if (oneRoomCount > 0) {
-      averagePrice = oneRoomTotal / oneRoomCount;
-      System.out.printf("Rooms:       ONE, price: %.2f\n", averagePrice);
+    // Sortiere die Ergebnisse nach Durchschnittspreis in absteigender Reihenfolge
+    averagePriceList.sort((e1, e2) -> Double.compare(e2.getValue(), e1.getValue()));
+
+    // Gib die Ergebnisse aus
+    for (Map.Entry<Rooms, Double> entry : averagePriceList) {
+      System.out.printf("Rooms: %9s, price: %.2f%n", entry.getKey(), entry.getValue());
     }
   }
 
   public static void averagePricePerYear(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Average price per year for properties");
+    System.out.println("Average price per year for properties.");
 
-    int startYear = 2011; // Startjahr
-    int endYear = 2022; // Endjahr
-    double[] totalPrices =
-        new double[endYear + 1]; // Array zur Speicherung der Gesamtsumme pro Jahr
-    int[] counts = new int[endYear + 1]; // Array zur Speicherung der Anzahl der Immobilien pro Jahr
+    // Eine Map zur Speicherung der Gesamtsummen und Zählungen der Preise pro Jahr
+    Map<Integer, Double> totalPriceMap = new HashMap<>();
+    Map<Integer, Integer> countMap = new HashMap<>();
 
-    // Schleife durch die Liste der Immobilien
+    // Iteriere durch die Properties, um die Preise zu summieren und die Zählungen zu erhöhen
     for (Property property : propertyList) {
       if (property.price() != null) {
         int year = property.year();
-
-        // Gesamtsumme und Zähler für das Jahr aktualisieren, nur wenn das Jahr im gültigen Bereich
-        // liegt
-        if (year >= startYear && year <= endYear) {
-          totalPrices[year] += property.price();
-          counts[year]++;
-        }
+        totalPriceMap.put(year, totalPriceMap.getOrDefault(year, 0.0) + property.price());
+        countMap.put(year, countMap.getOrDefault(year, 0) + 1);
       }
     }
 
-    // Durchschnittspreise berechnen und ausgeben
-    for (int year = startYear; year <= endYear; year++) {
-      if (counts[year] > 0) { // Nur Jahre mit Immobilien berücksichtigen
-        double averagePrice = totalPrices[year] / counts[year];
-        System.out.printf("Year: %d, Average Price: %.2f%n", year, averagePrice);
-      } else {
-        System.out.printf(
-            "Year: %d, Average Price: N/A%n", year); // Bei fehlenden Daten "N/A" ausgeben
-      }
+    // Sortiere die Jahre
+    List<Integer> sortedYears = new ArrayList<>(totalPriceMap.keySet());
+    Collections.sort(sortedYears);
+
+    // Gib die Durchschnittspreise aus
+    for (int year : sortedYears) {
+      double averagePrice = totalPriceMap.get(year) / countMap.get(year);
+      System.out.printf("year: %d, average price: %.2f%n", year, averagePrice);
     }
   }
 
@@ -129,61 +72,54 @@ public class AveragePrice {
     System.out.println("\n\n");
     System.out.println("Average price per year and district");
 
-    // Maximale Jahre und die Bezirke
-    int startYear = 2011; // Startjahr
-    int endYear = 2022; // Endjahr
-    District[] districts = District.values(); // Alle Bezirke abrufen
+    // Eine Map zur Speicherung der Gesamtsummen und Zählungen der Preise pro Jahr und Bezirk
+    Map<Integer, Map<District, Double>> salesPerYearDistrict = new HashMap<>();
+    Map<Integer, Map<District, Integer>> countMap = new HashMap<>();
 
-    // Arrays zur Speicherung der Gesamtsumme der Preise und der Zähler für jedes Jahr und jeden
-    // Bezirk
-    double[][] totalPrices = new double[endYear + 1][districts.length];
-    int[][] counts = new int[endYear + 1][districts.length];
-
-    // Schleife durch die Immobilien
+    // Iteriere durch die Properties, um die Preise zu summieren und die Zählungen zu erhöhen
     for (Property property : propertyList) {
       if (property.price() != null) {
         int year = property.year();
         District district = property.district();
 
-        // Bezirk-Index finden
-        int districtIndex = getDistrictIndex(districts, district);
+        salesPerYearDistrict.putIfAbsent(year, new HashMap<>());
+        countMap.putIfAbsent(year, new HashMap<>());
 
-        // Wenn das Jahr im gültigen Bereich und der Bezirk gefunden wurde
-        if (year >= startYear && year <= endYear && districtIndex != -1) {
-          totalPrices[year][districtIndex] += property.price(); // Preis zur Gesamtsumme hinzufügen
-          counts[year][districtIndex]++; // Zähler erhöhen
-        }
+        salesPerYearDistrict
+                .get(year)
+                .put(district, salesPerYearDistrict.get(year).getOrDefault(district, 0.0) + property.price());
+        countMap.get(year).put(district, countMap.get(year).getOrDefault(district, 0) + 1);
       }
     }
 
-    // Kopfzeile ausgeben
-    System.out.print("Year");
-    for (District district : districts) {
+    // Header ausgeben
+    System.out.print("year");
+    Set<District> districts = new TreeSet<>(Comparator.comparingInt(District::getSortOrder));
+    for (Map<District, Double> map : salesPerYearDistrict.values()) {
+      districts.addAll(map.keySet());
+    }
+
+    // Bezirke sortieren und ausgeben
+    List<District> sortedDistricts = new ArrayList<>(districts);
+    for (District district : sortedDistricts) {
       System.out.printf("%12s", district);
     }
     System.out.println();
 
-    // Durchschnittspreise berechnen und ausgeben
-    for (int year = startYear; year <= endYear; year++) {
-      System.out.printf("%4d", year); // Jahr ausgeben
-      for (int districtIndex = 0; districtIndex < districts.length; districtIndex++) {
-        if (counts[year][districtIndex] > 0) {
-          double averagePrice = totalPrices[year][districtIndex] / counts[year][districtIndex];
-          System.out.printf("%12.2f", averagePrice); // Durchschnittspreis ausgeben
-        } else {
-          System.out.printf("%12s", "N/A"); // Bei fehlenden Daten "N/A" ausgeben
-        }
+    // Berechne und gib die Durchschnittspreise aus
+    List<Integer> sortedYears = new ArrayList<>(salesPerYearDistrict.keySet());
+    Collections.sort(sortedYears); // Jahre sortieren
+
+    for (int year : sortedYears) {
+      System.out.printf("%4d", year);
+      for (District district : sortedDistricts) {
+        double averagePrice =
+                salesPerYearDistrict.get(year).getOrDefault(district, 0.0)
+                        / countMap.get(year).getOrDefault(district, 1);
+        System.out.printf("%12.2f", averagePrice);
       }
-      System.out.println(); // Neue Zeile nach jedem Jahr
+      System.out.println();
     }
   }
 
-  private static int getDistrictIndex(District[] districts, District district) {
-    for (int i = 0; i < districts.length; i++) {
-      if (districts[i] == district) {
-        return i; // Index zurückgeben, wenn Bezirk gefunden
-      }
-    }
-    return -1;
-  }
 }
