@@ -100,8 +100,12 @@ public class NumberOfSales {
                     Collectors.groupingBy(Property::district, Collectors.counting())));
 
     final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
-    final Set<District> districts = new TreeSet<>();
-    salesPerYearDistrict.values().forEach(map -> districts.addAll(map.keySet()));
+    final List<District> districts =
+        salesPerYearDistrict.values().stream()
+            .flatMap(map -> map.keySet().stream())
+            .distinct()
+            .sorted(Comparator.comparingInt(District::getSortOrder))
+            .toList();
 
     Stream.concat(
             Stream.of(
