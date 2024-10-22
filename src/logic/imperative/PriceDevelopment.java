@@ -12,40 +12,56 @@ public class PriceDevelopment {
     System.out.println(
         "Price development in percent per district between " + yearA + " and " + yearB);
 
-    District[] districts = District.values();
-    double[] priceA = new double[districts.length];
-    double[] priceB = new double[districts.length];
-    int[] countA = new int[districts.length];
-    int[] countB = new int[districts.length];
+    Map<District, Double> priceA = new EnumMap<>(District.class);
+    Map<District, Double> priceB = new EnumMap<>(District.class);
+    Map<District, Integer> countA = new EnumMap<>(District.class);
+    Map<District, Integer> countB = new EnumMap<>(District.class);
 
-    //  Preise für Jahr A und Jahr B
+    // Preise für Jahr A und Jahr B berechnen
     for (Property property : propertyList) {
       if (property.price() != null) {
-        for (int i = 0; i < districts.length; i++) {
-          if (property.district() == districts[i]) {
-            if (property.year() == yearA) {
-              priceA[i] += property.price();
-              countA[i]++;
-            } else if (property.year() == yearB) {
-              priceB[i] += property.price();
-              countB[i]++;
-            }
-          }
+        District district = property.district();
+        if (property.year() == yearA) {
+          priceA.put(district, priceA.getOrDefault(district, 0.0) + property.price());
+          countA.put(district, countA.getOrDefault(district, 0) + 1);
+        } else if (property.year() == yearB) {
+          priceB.put(district, priceB.getOrDefault(district, 0.0) + property.price());
+          countB.put(district, countB.getOrDefault(district, 0) + 1);
         }
       }
     }
 
-    // Preisentwicklung pro Bezirk
-    for (int i = 0; i < districts.length; i++) {
-      if (countA[i] > 0) priceA[i] /= countA[i];
-      if (countB[i] > 0) priceB[i] /= countB[i];
+    // Ausgabe sortieren und entwickeln
+    List<Map.Entry<District, Double>> developments = new ArrayList<>();
+    for (District district : District.values()) {
+      double avgPriceA =
+          countA.getOrDefault(district, 0) > 0 ? priceA.get(district) / countA.get(district) : 0;
+      double avgPriceB =
+          countB.getOrDefault(district, 0) > 0 ? priceB.get(district) / countB.get(district) : 0;
 
-      if (priceA[i] != 0.0 && priceB[i] != 0.0) {
-        double development = (priceB[i] - priceA[i]) / priceA[i] * 100;
-        System.out.printf(
-            "District: %10s, Price development: %6.2f%%%n", districts[i], development);
+      if (avgPriceA != 0.0) {
+        double development = (avgPriceB - avgPriceA) / avgPriceA * 100;
+        developments.add(new AbstractMap.SimpleEntry<>(district, development));
       } else {
-        System.out.printf("District: %10s, Price development: no data%n", districts[i]);
+        developments.add(new AbstractMap.SimpleEntry<>(district, null));
+      }
+    }
+
+    // Sortierung nach Preisentwicklung
+    developments.sort(
+        (entry1, entry2) -> {
+          if (entry1.getValue() == null) return 1;
+          if (entry2.getValue() == null) return -1;
+          return Double.compare(entry2.getValue(), entry1.getValue());
+        });
+
+    // Ergebnisse ausgeben
+    for (Map.Entry<District, Double> entry : developments) {
+      if (entry.getValue() != null) {
+        System.out.printf(
+            "District: %10s, Price development: %6.2f%%%n", entry.getKey(), entry.getValue());
+      } else {
+        System.out.printf("District: %10s, Price development: no data%n", entry.getKey());
       }
     }
   }
@@ -56,44 +72,54 @@ public class PriceDevelopment {
     System.out.println(
         "Price development in percent per number of rooms between " + yearA + " und " + yearB);
 
-    // Arrays für die Zimmer und Durchschnittspreise in beiden Jahren
-    double[] priceA = new double[Rooms.values().length];
-    int[] countA = new int[Rooms.values().length];
-    double[] priceB = new double[Rooms.values().length];
-    int[] countB = new int[Rooms.values().length];
+    Map<Rooms, Double> priceA = new EnumMap<>(Rooms.class);
+    Map<Rooms, Double> priceB = new EnumMap<>(Rooms.class);
+    Map<Rooms, Integer> countA = new EnumMap<>(Rooms.class);
+    Map<Rooms, Integer> countB = new EnumMap<>(Rooms.class);
 
-    // Durchschnittspreise für Jahr A und B berechnen
+    // Durchschnittspreise und Zählungen in einer Schleife berechnen
     for (Property property : propertyList) {
       if (property.price() != null) {
         Rooms rooms = property.rooms();
         if (property.year() == yearA) {
-          priceA[rooms.ordinal()] += property.price();
-          countA[rooms.ordinal()]++;
+          priceA.put(rooms, priceA.getOrDefault(rooms, 0.0) + property.price());
+          countA.put(rooms, countA.getOrDefault(rooms, 0) + 1);
         } else if (property.year() == yearB) {
-          priceB[rooms.ordinal()] += property.price();
-          countB[rooms.ordinal()]++;
+          priceB.put(rooms, priceB.getOrDefault(rooms, 0.0) + property.price());
+          countB.put(rooms, countB.getOrDefault(rooms, 0) + 1);
         }
       }
     }
 
-    // Durchschnittsberechnung
-    for (int i = 0; i < Rooms.values().length; i++) {
-      if (countA[i] > 0) {
-        priceA[i] /= countA[i];
-      }
-      if (countB[i] > 0) {
-        priceB[i] /= countB[i];
+    List<Map.Entry<Rooms, Double>> developments = new ArrayList<>();
+    for (Rooms rooms : Rooms.values()) {
+      double avgPriceA =
+          countA.getOrDefault(rooms, 0) > 0 ? priceA.get(rooms) / countA.get(rooms) : 0;
+      double avgPriceB =
+          countB.getOrDefault(rooms, 0) > 0 ? priceB.get(rooms) / countB.get(rooms) : 0;
+
+      if (avgPriceA != 0.0) {
+        double development = (avgPriceB - avgPriceA) / avgPriceA * 100;
+        developments.add(new AbstractMap.SimpleEntry<>(rooms, development));
+      } else {
+        developments.add(new AbstractMap.SimpleEntry<>(rooms, null));
       }
     }
 
-    for (int i = 0; i < Rooms.values().length; i++) {
-      if (priceA[i] != 0.0 && priceB[i] != 0.0) {
-        double development = (priceB[i] - priceA[i]) / priceA[i] * 100;
+    developments.sort(
+        (entry1, entry2) -> {
+          if (entry1.getValue() == null) return 1;
+          if (entry2.getValue() == null) return -1;
+          return Double.compare(entry2.getValue(), entry1.getValue());
+        });
+
+    for (Map.Entry<Rooms, Double> entry : developments) {
+      if (entry.getValue() != null) {
         System.out.printf(
-            "Rooms: %10s, Price development: %6.2f%%%n", Rooms.values()[i], development);
+            "Rooms: %10s, Price development: %6.2f%%%n", entry.getKey(), entry.getValue());
       } else {
-        System.out.printf("Rooms: %10s, Price development: %6.2f%%%n", Rooms.values()[i], 0.0);
+        System.out.printf("Rooms: %10s, Price development: no data%n", entry.getKey());
       }
     }
   }
-  }
+}
