@@ -1,11 +1,10 @@
 package logic.functional;
 
-import properties.Property;
-
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
+import properties.Property;
 
 public class HighestPrice {
   public static void mostExpensivePropertiesPrice(List<Property> propertyList, int limit) {

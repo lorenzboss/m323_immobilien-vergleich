@@ -10,15 +10,12 @@ public class PrintNumberOfSales {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
 
     System.out.println("You can filter by year, district, or rooms.");
-    boolean filterByYear =
-        askYesNoQuestion("Would you like to filter by year? (y/n): ");
+    boolean filterByYear = askYesNoQuestion("Would you like to filter by year? (y/n): ");
 
-    boolean filterByDistrict =
-        askYesNoQuestion("Would you like to filter by district? (y/n): ");
+    boolean filterByDistrict = askYesNoQuestion("Would you like to filter by district? (y/n): ");
 
     boolean filterByRooms =
-        !filterByDistrict
-            && askYesNoQuestion("Would you like to filter by rooms? (y/n): ");
+        !filterByDistrict && askYesNoQuestion("Would you like to filter by rooms? (y/n): ");
 
     if (!filterByYear && !filterByDistrict && !filterByRooms) {
       System.out.println("No filters were chosen, displaying unfiltered data.");

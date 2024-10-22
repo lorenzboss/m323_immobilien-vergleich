@@ -1,10 +1,9 @@
 package logic.imperative;
 
+import java.util.*;
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
-
-import java.util.*;
 
 public class NumberOfSales {
 

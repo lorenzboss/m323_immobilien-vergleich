@@ -1,12 +1,11 @@
 package userInteraction.printMethods;
 
-import java.util.*;
+import static userInteraction.HelperMethods.*;
 
+import java.util.*;
 import properties.Property;
 import properties.enums.Rooms;
 import userInteraction.LogicOption;
-
-import static userInteraction.HelperMethods.*;
 
 public class PrintPriceDifference {
   public static void start(List<Property> propertyList, LogicOption logicOption) {

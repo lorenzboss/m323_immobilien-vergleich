@@ -1,8 +1,7 @@
 package logic.imperative;
 
-import properties.Property;
-
 import java.util.List;
+import properties.Property;
 
 public class PropertiesInfo {
     public static void propertiesInfo(List<Property> propertyList, Integer limit) {

@@ -1,12 +1,9 @@
 package logic.imperative;
 
+import java.util.List;
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
-
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class PriceDifference {
 

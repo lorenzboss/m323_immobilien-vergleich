@@ -94,8 +94,9 @@ public class AveragePrice {
     System.out.println("Average price per year for properties");
 
     int startYear = 2011; // Startjahr
-    int endYear = 2022;   // Endjahr
-    double[] totalPrices = new double[endYear + 1]; // Array zur Speicherung der Gesamtsumme pro Jahr
+    int endYear = 2022; // Endjahr
+    double[] totalPrices =
+        new double[endYear + 1]; // Array zur Speicherung der Gesamtsumme pro Jahr
     int[] counts = new int[endYear + 1]; // Array zur Speicherung der Anzahl der Immobilien pro Jahr
 
     // Schleife durch die Liste der Immobilien
@@ -103,7 +104,8 @@ public class AveragePrice {
       if (property.price() != null) {
         int year = property.year();
 
-        // Gesamtsumme und Zähler für das Jahr aktualisieren, nur wenn das Jahr im gültigen Bereich liegt
+        // Gesamtsumme und Zähler für das Jahr aktualisieren, nur wenn das Jahr im gültigen Bereich
+        // liegt
         if (year >= startYear && year <= endYear) {
           totalPrices[year] += property.price();
           counts[year]++;
@@ -117,11 +119,11 @@ public class AveragePrice {
         double averagePrice = totalPrices[year] / counts[year];
         System.out.printf("Year: %d, Average Price: %.2f%n", year, averagePrice);
       } else {
-        System.out.printf("Year: %d, Average Price: N/A%n", year); // Bei fehlenden Daten "N/A" ausgeben
+        System.out.printf(
+            "Year: %d, Average Price: N/A%n", year); // Bei fehlenden Daten "N/A" ausgeben
       }
     }
   }
-
 
   public static void averagePricePerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");

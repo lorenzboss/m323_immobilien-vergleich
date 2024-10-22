@@ -1,12 +1,10 @@
 package logic.functional;
 
-import properties.Property;
-import properties.enums.District;
-import properties.enums.Rooms;
-
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import properties.Property;
+import properties.enums.District;
 
 public class AveragePrice {
   public static void averagePricePerNumberOfRooms(List<Property> propertyList) {

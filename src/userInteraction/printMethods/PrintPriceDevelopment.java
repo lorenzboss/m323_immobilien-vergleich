@@ -1,11 +1,10 @@
 package userInteraction.printMethods;
 
-import java.util.*;
+import static userInteraction.HelperMethods.*;
 
+import java.util.*;
 import properties.Property;
 import userInteraction.LogicOption;
-
-import static userInteraction.HelperMethods.*;
 
 public class PrintPriceDevelopment {
   public static void start(List<Property> propertyList, LogicOption logicOption) {

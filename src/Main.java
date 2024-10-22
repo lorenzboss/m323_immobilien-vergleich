@@ -1,10 +1,8 @@
 import java.io.IOException;
 import java.util.List;
-
 import logic.TestFunctions;
 import properties.JsonToProperties;
 import properties.Property;
-import userInteraction.ConsoleApplication;
 
 public class Main {
 

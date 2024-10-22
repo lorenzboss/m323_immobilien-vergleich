@@ -1,11 +1,10 @@
 package logic.functional;
 
+import java.util.*;
+import java.util.stream.Collectors;
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
-
-import java.util.*;
-import java.util.stream.Collectors;
 
 public class PriceDifference {
   public static void priceDifferencePerYear(

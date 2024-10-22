@@ -8,5 +8,4 @@ public record Property(
     @SerializedName("jahr") int year,
     @SerializedName("bezirk") District district,
     @SerializedName("zimmerzahl") Rooms rooms,
-    @SerializedName("verkaufspreis_chf") Integer price) {
-}
+    @SerializedName("verkaufspreis_chf") Integer price) {}
