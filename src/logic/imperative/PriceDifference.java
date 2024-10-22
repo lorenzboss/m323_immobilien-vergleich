@@ -1,7 +1,6 @@
 package logic.imperative;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
@@ -14,19 +13,29 @@ public class PriceDifference {
     System.out.println("Price difference per year between " + roomsA + " and " + roomsB);
 
     // Dynamischer Jahrbereich
-    int startYear = propertyList.stream().mapToInt(Property::year).min().orElse(2011);
-    int endYear = propertyList.stream().mapToInt(Property::year).max().orElse(2022);
+    int startYear = Integer.MAX_VALUE;
+    int endYear = Integer.MIN_VALUE;
 
-    // Durchgehen der Jahre
+    // Bestimmen des minimalen und maximalen Jahres
+    for (Property property : propertyList) {
+      int year = property.year();
+      if (year < startYear) {
+        startYear = year;
+      }
+      if (year > endYear) {
+        endYear = year;
+      }
+    }
+
+    // Durchgehen der Jahre und Berechnung der Preisunterschiede
     for (int year = startYear; year <= endYear; year++) {
       double totalPriceA = calculateTotalPrice(propertyList, roomsA, year);
       double totalPriceB = calculateTotalPrice(propertyList, roomsB, year);
       int countA = countProperties(propertyList, roomsA, year);
       int countB = countProperties(propertyList, roomsB, year);
 
-      // Durchschnittspreise und Preisdifferenz
-      double avgPriceA = countA > 0 ? totalPriceA / countA : 0.0;
-      double avgPriceB = countB > 0 ? totalPriceB / countB : 0.0;
+      double avgPriceA = getAveragePrice(totalPriceA, countA);
+      double avgPriceB = getAveragePrice(totalPriceB, countB);
       double priceDifference = avgPriceA - avgPriceB;
 
       System.out.printf("Year: %d, Price difference: %9.2f%n", year, priceDifference);
@@ -34,53 +43,48 @@ public class PriceDifference {
   }
 
   public static void priceDifferencePerDistrict(
-          List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
+      List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");
     System.out.println("Price difference per district between " + roomsA + " and " + roomsB);
 
-    Map<District, Double> averageA =
-            propertyList.stream()
-                    .filter(property -> property.rooms() == roomsA && property.price() != null) // Null-Prüfung hier
-                    .collect(
-                            Collectors.groupingBy(
-                                    Property::district, Collectors.averagingInt(Property::price)));
+    Map<District, Double> totalPriceA = new HashMap<>();
+    Map<District, Integer> countA = new HashMap<>();
+    Map<District, Double> totalPriceB = new HashMap<>();
+    Map<District, Integer> countB = new HashMap<>();
 
-    Map<District, Double> averageB =
-            propertyList.stream()
-                    .filter(property -> property.rooms() == roomsB && property.price() != null) // Null-Prüfung hier
-                    .collect(
-                            Collectors.groupingBy(
-                                    Property::district, Collectors.averagingInt(Property::price)));
+    // Berechnung von Gesamtpreisen und Zählungen für beide Raumkategorien
+    calculateTotals(propertyList, roomsA, totalPriceA, countA);
+    calculateTotals(propertyList, roomsB, totalPriceB, countB);
 
-    Set<District> districts = new TreeSet<>(averageA.keySet());
-    districts.addAll(averageB.keySet());
-
-    Map<District, Double> priceDifferences = new HashMap<>();
+    List<Map.Entry<District, Double>> priceDifferences = new ArrayList<>();
+    Set<District> districts = new TreeSet<>(totalPriceA.keySet());
+    districts.addAll(totalPriceB.keySet());
 
     for (District district : districts) {
-      double avgPriceA = averageA.getOrDefault(district, 0.0);
-      double avgPriceB = averageB.getOrDefault(district, 0.0);
-      double priceDifference = avgPriceA - avgPriceB;
+      double avgA =
+          getAveragePrice(
+              totalPriceA.getOrDefault(district, 0.0), countA.getOrDefault(district, 0));
+      double avgB =
+          getAveragePrice(
+              totalPriceB.getOrDefault(district, 0.0), countB.getOrDefault(district, 0));
+      double difference = avgA - avgB;
 
-      if (avgPriceA > 0 || avgPriceB > 0) {
-        priceDifferences.put(district, priceDifference);
-      }
+      priceDifferences.add(new AbstractMap.SimpleEntry<>(district, difference));
     }
 
-    // Ausgabe sortiert nach Preisunterschied
-    priceDifferences.entrySet().stream()
-            .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-            .forEach(entry ->
-                    System.out.printf(
-                            "District: %10s, Price Difference: %10.2f%n",
-                            entry.getKey(), entry.getValue()));
-  }
+    Collections.sort(
+        priceDifferences, (entry1, entry2) -> Double.compare(entry2.getValue(), entry1.getValue()));
 
+    for (Map.Entry<District, Double> entry : priceDifferences) {
+      System.out.printf(
+          "District: %10s, Price Difference: %10.2f%n", entry.getKey(), entry.getValue());
+    }
+  }
 
   private static double calculateTotalPrice(List<Property> propertyList, Rooms rooms, int year) {
     double totalPrice = 0.0;
     for (Property property : propertyList) {
-      if (property.year() == year && property.rooms() == rooms && property.price() != null) {
+      if (property.year() == year && property.rooms() == rooms && isPriceValid(property.price())) {
         totalPrice += property.price();
       }
     }
@@ -90,36 +94,33 @@ public class PriceDifference {
   private static int countProperties(List<Property> propertyList, Rooms rooms, int year) {
     int count = 0;
     for (Property property : propertyList) {
-      if (property.year() == year && property.rooms() == rooms && property.price() != null) {
+      if (property.year() == year && property.rooms() == rooms && isPriceValid(property.price())) {
         count++;
       }
     }
     return count;
   }
 
-  // Methode zur Zählung der Properties pro Bezirk und Zimmeranzahl
-  private static Map<District, Integer> countPropertiesByDistrict(
-      List<Property> propertyList, Rooms rooms) {
-    Map<District, Integer> countMap = new HashMap<>();
+  private static void calculateTotals(
+      List<Property> propertyList,
+      Rooms rooms,
+      Map<District, Double> totalPriceMap,
+      Map<District, Integer> countMap) {
     for (Property property : propertyList) {
-      if (property.rooms() == rooms) {
+      if (property.rooms() == rooms && isPriceValid(property.price())) {
+        totalPriceMap.put(
+            property.district(),
+            totalPriceMap.getOrDefault(property.district(), 0.0) + property.price());
         countMap.put(property.district(), countMap.getOrDefault(property.district(), 0) + 1);
       }
     }
-    return countMap;
   }
 
-  // Methode zur Berechnung des Gesamtpreises pro Bezirk und Zimmeranzahl
-  private static Map<District, Double> calculateTotalPriceByDistrict(
-      List<Property> propertyList, Rooms rooms) {
-    Map<District, Double> priceMap = new HashMap<>();
-    for (Property property : propertyList) {
-      if (property.rooms() == rooms && property.price() != null) {
-        priceMap.put(
-            property.district(),
-            priceMap.getOrDefault(property.district(), 0.0) + property.price());
-      }
-    }
-    return priceMap;
+  private static boolean isPriceValid(Integer price) {
+    return price != null && price > 0;
+  }
+
+  private static double getAveragePrice(double totalPrice, int count) {
+    return count > 0 ? totalPrice / count : 0.0;
   }
 }
