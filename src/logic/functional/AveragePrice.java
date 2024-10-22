@@ -2,7 +2,6 @@ package logic.functional;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import properties.Property;
 import properties.enums.District;
 
@@ -18,7 +17,7 @@ public class AveragePrice {
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .forEach(
             entry ->
-                System.out.printf("Rooms: %10s, price: %f%n", entry.getKey(), entry.getValue()));
+                System.out.printf("Rooms: %9s, price: %.2f%n", entry.getKey(), entry.getValue()));
   }
 
   public static void averagePricePerYear(List<Property> propertyList) {
@@ -30,12 +29,12 @@ public class AveragePrice {
         .collect(Collectors.groupingBy(Property::year, Collectors.averagingInt(Property::price)))
         .entrySet()
         .stream()
-        .sorted(Map.Entry.comparingByValue())
+        .sorted(Map.Entry.comparingByKey())
         .toList()
         .forEach(
             integerDoubleEntry ->
                 System.out.printf(
-                    "year: %d, average price: %f%n",
+                    "year: %d, average price: %.2f%n",
                     integerDoubleEntry.getKey(), integerDoubleEntry.getValue()));
   }
 
@@ -53,29 +52,32 @@ public class AveragePrice {
                         Property::district, Collectors.averagingInt(Property::price))));
 
     final Set<Integer> years = new TreeSet<>(salesPerYearDistrict.keySet());
-    final Set<District> districts = new TreeSet<>();
+    // TreeSet verwenden, um Districts zu sortieren
+    final Set<District> districts = new TreeSet<>(Comparator.comparingInt(District::getSortOrder));
     salesPerYearDistrict.values().forEach(map -> districts.addAll(map.keySet()));
 
-    Stream.concat(
-            Stream.of(
-                "year"
+    // Header ausgeben
+    System.out.print("year");
+    System.out.print(
+        districts.stream()
+            .map(district -> String.format("%12s", district))
+            .collect(Collectors.joining()));
+    System.out.println();
+
+    // Durchschnittspreise ausgeben
+    years.stream()
+        .map(
+            year ->
+                String.format("%4d", year)
                     + districts.stream()
-                        .map(district -> String.format("%12s", district))
-                        .collect(Collectors.joining())),
-            years.stream()
-                .map(
-                    year ->
-                        String.format("%4d", year)
-                            + districts.stream()
-                                .map(
-                                    district ->
-                                        String.format(
-                                            "%12.2f",
-                                            salesPerYearDistrict
-                                                .getOrDefault(year, Collections.emptyMap())
-                                                .getOrDefault(district, 0.0)))
-                                .collect(Collectors.joining())))
-        .toList()
+                        .map(
+                            district ->
+                                String.format(
+                                    "%12.2f",
+                                    salesPerYearDistrict
+                                        .getOrDefault(year, Collections.emptyMap())
+                                        .getOrDefault(district, 0.0)))
+                        .collect(Collectors.joining()))
         .forEach(System.out::println);
   }
 }
