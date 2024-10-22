@@ -13,67 +13,76 @@ public class NumberOfSales {
   }
 
   public static void numberOfSalesPerDistrict(List<Property> propertyList) {
-    System.out.println("\n\nNumber of sales per district:");
+    System.out.println("\n\n");
+    System.out.println("Number of sales per district: ");
 
-    // Zähler für jede District
-    long laufenCount = 0;
-    long liestalCount = 0;
-    long sissachCount = 0;
-    long waldenburgCount = 0;
-    long arlesheimCount = 0;
+    // Eine Map zur Speicherung der Verkaufsanzahl pro Bezirk
+    Map<District, Integer> districtSalesMap = new HashMap<>();
 
-
-    // Zählen der Verkäufe
+    // Durch die Liste der Properties iterieren und die Verkaufszahlen pro Bezirk sammeln
     for (Property property : propertyList) {
       District district = property.district();
-
-      switch (district) {
-        case LAUFEN -> laufenCount++;
-        case LIESTAL -> liestalCount++;
-        case SISSACH -> sissachCount++;
-        case WALDENBURG -> waldenburgCount++;
-        case ARLESHEIM -> arlesheimCount++;
-
+      if (districtSalesMap.containsKey(district)) {
+        districtSalesMap.put(district, districtSalesMap.get(district) + 1);
+      } else {
+        districtSalesMap.put(district, 1);
       }
     }
 
-    // Zähler und Bezirksnamen in Arrays speichern
-    long[] counts = {
-      laufenCount, liestalCount, sissachCount, waldenburgCount, arlesheimCount
-    };
-    String[] districtNames = {"LAUFEN", "LIESTAL", "SISSACH", "WALDENBURG", "ARLESHEIM"};
+    // Die Einträge der Map in eine Liste umwandeln und sortieren (absteigend nach Verkaufszahlen)
+    List<Map.Entry<District, Integer>> entryList = new ArrayList<>(districtSalesMap.entrySet());
+    entryList.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
-    // Ausgabe aller Bezirke und ihrer Verkaufszahlen
-    for (int i = 0; i < counts.length; i++) {
-      if (counts[i] > 0) {
-        System.out.printf("District: %-10s Sales: %d%n", districtNames[i], counts[i]);
-      }
+    // Die sortierte Liste der Bezirke und Verkaufszahlen ausgeben
+    for (Map.Entry<District, Integer> entry : entryList) {
+      System.out.printf("District: %-10s Sales: %d%n", entry.getKey(), entry.getValue());
+    }
+  }
+
+  public static void numberOfSalesPerRooms(List<Property> propertyList) {
+    System.out.println("\n\n");
+    System.out.println("Number of sales per rooms: ");
+
+    // Eine Map zur Speicherung der Verkaufsanzahl pro Anzahl der Zimmer
+    Map<Rooms, Integer> roomsSalesMap = new HashMap<>();
+
+    // Durch die Liste der Properties iterieren und die Verkaufszahlen pro Anzahl der Zimmer sammeln
+    for (Property property : propertyList) {
+      Rooms rooms = property.rooms();
+      roomsSalesMap.put(rooms, roomsSalesMap.getOrDefault(rooms, 0) + 1);
+    }
+
+    // Die Einträge der Map in eine Liste umwandeln und sortieren (nach Zimmer in
+    // getSortOrder-Reihenfolge)
+    List<Map.Entry<Rooms, Integer>> entryList = new ArrayList<>(roomsSalesMap.entrySet());
+    entryList.sort(Map.Entry.comparingByKey(Comparator.comparingInt(Rooms::getSortOrder)));
+
+    // Die sortierte Liste der Zimmeranzahl und Verkaufszahlen ausgeben
+    for (Map.Entry<Rooms, Integer> entry : entryList) {
+      System.out.printf("Rooms: %-10s Sales: %d%n", entry.getKey(), entry.getValue());
     }
   }
 
   public static void numberOfSalesPerYear(List<Property> propertyList) {
-    System.out.println("\n\nNumber of sales per year:");
+    System.out.println("\n\n");
+    System.out.println("Number of sales per year: ");
 
-    int startYear = 2011;
-    int endYear = 2022;
-    int[] salesCountPerYear = new int[endYear - startYear + 1];
+    // Eine Map zur Speicherung der Verkaufsanzahl pro Jahr
+    Map<Integer, Integer> yearSalesMap = new HashMap<>();
 
-    // Verkäufe pro Jahr
+    // Durch die Liste der Properties iterieren und die Verkaufszahlen pro Jahr sammeln
     for (Property property : propertyList) {
       int year = property.year();
-
-      // Jahr im erwarteten Bereich
-      if (year >= startYear && year <= endYear) {
-        salesCountPerYear[year - startYear]++;
-      }
+      yearSalesMap.put(year, yearSalesMap.getOrDefault(year, 0) + 1);
     }
 
-    // Ausgabe der Verkaufszahlen pro Jahr
-    for (int i = 0; i < salesCountPerYear.length; i++) {
-      int year = startYear + i;
-      if (salesCountPerYear[i] > 0) {
-        System.out.printf("%d: Sold properties: %d%n", year, salesCountPerYear[i]);
-      }
+    // Die Einträge der Map in eine Liste umwandeln und nach Jahr sortieren
+    List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(yearSalesMap.entrySet());
+    entryList.sort(Map.Entry.comparingByKey());
+
+    // Die sortierte Liste der Jahre und Verkaufszahlen ausgeben
+    for (Map.Entry<Integer, Integer> entry : entryList) {
+      System.out.printf("%d: Sold properties: %d%n", entry.getKey(), entry.getValue());
     }
   }
 
@@ -81,38 +90,40 @@ public class NumberOfSales {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and number of rooms: ");
 
-    // Angenommener Zeitraum
-    int startYear = 2010;
-    int endYear = 2024;
-    int yearsCount = endYear - startYear + 1;
+    // Eine Map zur Speicherung der Verkaufsanzahl pro Jahr und Zimmeranzahl
+    Map<Integer, Map<Rooms, Integer>> salesPerYearRooms = new HashMap<>();
 
-    // Array für die Zimmeranzahl, angenommen sind 6 Zimmerkategorien
-    long[][] salesCount = new long[yearsCount][Rooms.values().length];
-
-    // Zählen der Verkäufe pro Jahr und Zimmeranzahl
+    // Durch die Liste der Properties iterieren und die Verkaufszahlen pro Jahr und Zimmeranzahl
+    // sammeln
     for (Property property : propertyList) {
       int year = property.year();
       Rooms rooms = property.rooms();
 
-      if (year >= startYear && year <= endYear) {
-        int yearIndex = year - startYear;
-        int roomIndex = rooms.ordinal(); // Verwende den Enum-Index für die Zimmeranzahl
-        salesCount[yearIndex][roomIndex]++;
-      }
+      salesPerYearRooms.putIfAbsent(year, new HashMap<>());
+      Map<Rooms, Integer> roomsMap = salesPerYearRooms.get(year);
+      roomsMap.put(rooms, roomsMap.getOrDefault(rooms, 0) + 1);
     }
 
-    // Überschrift ausgeben
+    // Print header row
     System.out.print("Year");
-    for (Rooms rooms : Rooms.values()) {
+    Set<Rooms> roomsSet = new TreeSet<>(Comparator.comparingInt(Rooms::getSortOrder));
+    for (Map<Rooms, Integer> map : salesPerYearRooms.values()) {
+      roomsSet.addAll(map.keySet());
+    }
+    for (Rooms rooms : roomsSet) {
       System.out.printf("%11s", rooms);
     }
     System.out.println();
 
-    // Ausgeben der Verkaufszahlen
-    for (int i = 0; i < salesCount.length; i++) {
-      System.out.printf("%4d", startYear + i);
-      for (int j = 0; j < salesCount[i].length; j++) {
-        System.out.printf("%11d", salesCount[i][j]);
+    // Nach Jahr sortieren und die Zeilen ausgeben
+    List<Integer> sortedYears = new ArrayList<>(salesPerYearRooms.keySet());
+    Collections.sort(sortedYears); // Jahre sortieren
+
+    for (Integer year : sortedYears) {
+      System.out.printf("%4d", year);
+      Map<Rooms, Integer> roomsMap = salesPerYearRooms.get(year);
+      for (Rooms rooms : roomsSet) {
+        System.out.printf("%11d", roomsMap.getOrDefault(rooms, 0));
       }
       System.out.println();
     }
@@ -122,45 +133,41 @@ public class NumberOfSales {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and district: ");
 
-    // Angenommener Zeitraum
-    int startYear = 2010;
-    int endYear = 2024;
-    int yearsCount = endYear - startYear + 1;
-    int districtCount = District.values().length;
+    // Eine Map zur Speicherung der Verkaufsanzahl pro Jahr und Bezirk
+    Map<Integer, Map<District, Integer>> salesPerYearDistrict = new HashMap<>();
 
-    // Array zur Zählung der Verkäufe pro Jahr und Bezirk
-    long[][] salesCount = new long[yearsCount][districtCount];
-
-    // Verkäufe pro Jahr und Bezirk
+    // Durch die Liste der Properties iterieren und die Verkaufszahlen pro Jahr und Bezirk sammeln
     for (Property property : propertyList) {
       int year = property.year();
       District district = property.district();
 
-      if (year >= startYear && year <= endYear) {
-        int yearIndex = year - startYear;
-        int districtIndex = district.ordinal(); // Verwende den Enum-Index für den Bezirk
-        salesCount[yearIndex][districtIndex]++;
-      }
+      salesPerYearDistrict.putIfAbsent(year, new HashMap<>());
+      Map<District, Integer> districtMap = salesPerYearDistrict.get(year);
+      districtMap.put(district, districtMap.getOrDefault(district, 0) + 1);
     }
 
+    // Header ausgeben
     System.out.print("Year");
-    for (District district : District.values()) {
+    Set<District> districts = new TreeSet<>(Comparator.comparingInt(District::getSortOrder));
+    for (Map<District, Integer> map : salesPerYearDistrict.values()) {
+      districts.addAll(map.keySet());
+    }
+    for (District district : districts) {
       System.out.printf("%12s", district);
     }
     System.out.println();
 
+    // Die Jahre sortieren und die Zeilen nach sortierten Jahren und Bezirken ausgeben
+    List<Integer> sortedYears = new ArrayList<>(salesPerYearDistrict.keySet());
+    Collections.sort(sortedYears); // Jahre sortieren
 
-    for (int i = 0; i < salesCount.length; i++) {
-      int year = startYear + i;
+    for (Integer year : sortedYears) {
       System.out.printf("%4d", year);
-      for (int j = 0; j < salesCount[i].length; j++) {
-        System.out.printf("%12d", salesCount[i][j]);
+      Map<District, Integer> districtMap = salesPerYearDistrict.get(year);
+      for (District district : districts) {
+        System.out.printf("%12d", districtMap.getOrDefault(district, 0));
       }
       System.out.println();
     }
   }
-
-  public static void numberOfSalesPerRooms(List<Property> propertyList) {
-    // TODO: Implement this method
-  }
-  }
+}
