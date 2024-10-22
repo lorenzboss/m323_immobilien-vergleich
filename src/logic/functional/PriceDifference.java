@@ -41,7 +41,7 @@ public class PriceDifference {
   public static void priceDifferencePerDistrict(
       List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");
-    System.out.println("Price difference per year between " + roomsA + " and " + roomsB);
+    System.out.println("Price difference per district between " + roomsA + " and " + roomsB);
 
     Map<District, Double> averageA =
         propertyList.stream()
