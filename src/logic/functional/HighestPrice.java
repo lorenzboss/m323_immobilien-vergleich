@@ -26,15 +26,17 @@ public class HighestPrice {
     AtomicInteger index = new AtomicInteger(1);
     System.out.println("\n\n");
     System.out.println("The most expensive properties");
+    System.out.printf(
+        "%-4s %-5s %-10s %-10s %-10s%n", "", "Year", "District", "Rooms", "Price CHF");
+
     propertyList.stream()
         .filter(property -> property.price() != null)
         .sorted(Comparator.comparing(Property::price).reversed())
         .limit(limit)
-        .toList()
         .forEach(
             property ->
                 System.out.printf(
-                    "%3d: year: %d, district: %10s, rooms: %9s, price CHF: %d%n",
+                    "%-4d %-5d %-10s %-10s %-10d%n",
                     index.getAndIncrement(),
                     property.year(),
                     property.district(),
