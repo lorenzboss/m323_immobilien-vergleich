@@ -86,8 +86,10 @@ public class AveragePrice {
         countMap.putIfAbsent(year, new HashMap<>());
 
         salesPerYearDistrict
-                .get(year)
-                .put(district, salesPerYearDistrict.get(year).getOrDefault(district, 0.0) + property.price());
+            .get(year)
+            .put(
+                district,
+                salesPerYearDistrict.get(year).getOrDefault(district, 0.0) + property.price());
         countMap.get(year).put(district, countMap.get(year).getOrDefault(district, 0) + 1);
       }
     }
@@ -114,12 +116,11 @@ public class AveragePrice {
       System.out.printf("%4d", year);
       for (District district : sortedDistricts) {
         double averagePrice =
-                salesPerYearDistrict.get(year).getOrDefault(district, 0.0)
-                        / countMap.get(year).getOrDefault(district, 1);
+            salesPerYearDistrict.get(year).getOrDefault(district, 0.0)
+                / countMap.get(year).getOrDefault(district, 1);
         System.out.printf("%12.2f", averagePrice);
       }
       System.out.println();
     }
   }
-
 }

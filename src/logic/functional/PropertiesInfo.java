@@ -27,10 +27,9 @@ public class PropertiesInfo {
             ? "All properties in compact form:"
             : String.format("The first %d properties in compact form:", limit));
 
-      System.out.printf(
-              "%s %-10s %-9s %7s%n", "Year", "Distract", "Rooms", "Price");
+    System.out.printf("%s %-10s %-9s %7s%n", "Year", "Distract", "Rooms", "Price");
 
-      propertyList.stream()
+    propertyList.stream()
         .limit(limit != null ? limit : propertyList.size())
         .forEach(
             property ->

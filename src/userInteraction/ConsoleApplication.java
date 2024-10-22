@@ -1,12 +1,12 @@
 package userInteraction;
 
+import static userInteraction.HelperMethods.askForInt;
+import static userInteraction.HelperMethods.askForLogicOption;
+
 import java.util.List;
 import java.util.Scanner;
 import properties.Property;
 import userInteraction.printMethods.*;
-
-import static userInteraction.HelperMethods.askForInt;
-import static userInteraction.HelperMethods.askForLogicOption;
 
 public class ConsoleApplication {
 

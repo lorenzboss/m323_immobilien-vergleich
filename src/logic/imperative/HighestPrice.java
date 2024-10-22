@@ -46,20 +46,19 @@ public class HighestPrice {
 
     // Header für die Tabelle ausgeben
     System.out.printf(
-            "%-4s %-5s %-10s %-10s %-10s%n", "", "Year", "District", "Rooms", "Price CHF");
+        "%-4s %-5s %-10s %-10s %-10s%n", "", "Year", "District", "Rooms", "Price CHF");
 
     // Gib die ersten 'limit' Elemente aus
     AtomicInteger index = new AtomicInteger(1);
     for (int i = 0; i < Math.min(limit, propertyList.size()); i++) {
       Property property = propertyList.get(i);
       System.out.printf(
-              "%-4d %-5d %-10s %-10s %-10d%n",
-              index.getAndIncrement(),
-              property.year(),
-              property.district(),
-              property.rooms(),
-              property.price());
+          "%-4d %-5d %-10s %-10s %-10d%n",
+          index.getAndIncrement(),
+          property.year(),
+          property.district(),
+          property.rooms(),
+          property.price());
     }
   }
-
 }

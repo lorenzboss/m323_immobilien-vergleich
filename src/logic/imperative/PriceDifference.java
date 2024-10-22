@@ -2,7 +2,6 @@ package logic.imperative;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
 import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
