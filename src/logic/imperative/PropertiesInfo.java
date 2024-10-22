@@ -37,7 +37,7 @@ public class PropertiesInfo {
             System.out.println("Please enter a valid number!");
             return;
         } else {
-            System.out.printf("The first %d properties%n", limit);
+            System.out.printf("The first %d properties in compact form:%n", limit);
         }
         System.out.printf(
                 "%s %-10s %-9s %7s%n", "Year", "Distract", "Rooms", "Price");
