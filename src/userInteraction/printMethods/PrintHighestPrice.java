@@ -7,6 +7,12 @@ import java.util.List;
 import properties.Property;
 import userInteraction.LogicOption;
 
+/**
+ * This class is responsible for printing the highest price of the properties.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class PrintHighestPrice {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     boolean priceOnly =

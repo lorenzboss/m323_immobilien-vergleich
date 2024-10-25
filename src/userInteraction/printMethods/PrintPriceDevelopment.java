@@ -6,6 +6,12 @@ import java.util.*;
 import properties.Property;
 import userInteraction.LogicOption;
 
+/**
+ * This class is responsible for printing the price development between two years.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class PrintPriceDevelopment {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     System.out.println("Here you can get the price development between two years (2011-2023).");

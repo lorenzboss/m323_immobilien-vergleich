@@ -8,10 +8,22 @@ import java.util.Scanner;
 import properties.Property;
 import userInteraction.printMethods.*;
 
+/**
+ * This class is responsible for the user interaction.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class ConsoleApplication {
 
   private static final Scanner scanner = new Scanner(System.in);
 
+  /**
+   * Starts the user interaction and asks for if the user wants to use functional or imperative
+   * logic.
+   *
+   * @param propertyList the list of properties
+   */
   public static void start(List<Property> propertyList) {
 
     System.out.println("Welcome to the Property Comparator!");
@@ -24,10 +36,10 @@ public class ConsoleApplication {
 
     LogicOption logicOption = askForLogicOption();
 
-    handleOptionEnum(logicOption, propertyList);
+    chooseFunction(logicOption, propertyList);
   }
 
-  private static void handleOptionEnum(LogicOption logicOption, List<Property> propertyList) {
+  private static void chooseFunction(LogicOption logicOption, List<Property> propertyList) {
     while (true) {
       System.out.println("1. Print all properties");
       System.out.println("2. Print the number of sales");

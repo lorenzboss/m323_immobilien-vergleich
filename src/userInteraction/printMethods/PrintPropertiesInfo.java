@@ -7,8 +7,20 @@ import java.util.List;
 import properties.Property;
 import userInteraction.LogicOption;
 
+/**
+ * This class is responsible for printing the properties info in a compact or normal form.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class PrintPropertiesInfo {
 
+  /**
+   * Starts the user interaction and asks for the params.
+   *
+   * @param propertyList the list of properties
+   * @param logicOption the logic option
+   */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     boolean compactForm =
         askYesNoQuestion("Do you want to print the properties in a compact form? (y/n): ");

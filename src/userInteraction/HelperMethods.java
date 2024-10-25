@@ -3,9 +3,21 @@ package userInteraction;
 import java.util.Scanner;
 import properties.enums.Rooms;
 
+/**
+ * This class contains helper methods for user interaction.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class HelperMethods {
   private static final Scanner scanner = new Scanner(System.in);
 
+  /**
+   * Asks the user a yes or no question.
+   *
+   * @param question the question
+   * @return true if the user answers with yes, false if the user answers with no
+   */
   public static boolean askYesNoQuestion(String question) {
     while (true) {
       System.out.print(question);
@@ -20,6 +32,14 @@ public class HelperMethods {
     }
   }
 
+  /**
+   * Asks the user for an integer.
+   *
+   * @param question the question
+   * @param maxLimit the maximum limit
+   * @param minLimit the minimum limit
+   * @return the user input
+   */
   public static Integer askForInt(String question, int maxLimit, int minLimit) {
     while (true) {
       System.out.print(question);
@@ -32,6 +52,11 @@ public class HelperMethods {
     }
   }
 
+  /**
+   * Asks the user for the logic option.
+   *
+   * @return the option if the user selects functional or imperative logic
+   */
   public static LogicOption askForLogicOption() {
     while (true) {
       System.out.print("Please select an option: ");

@@ -6,6 +6,12 @@ import java.util.*;
 import properties.Property;
 import userInteraction.LogicOption;
 
+/**
+ * This class is responsible for printing the average price of the properties.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class PrintAveragePrice {
   public static void start(List<Property> propertyList, LogicOption logicOption) {
 
