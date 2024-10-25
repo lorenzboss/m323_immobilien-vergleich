@@ -1,5 +1,11 @@
 package properties.enums;
 
+/**
+ * Enum for the district.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public enum District {
   LAUFEN,
   LIESTAL,
@@ -7,6 +13,11 @@ public enum District {
   WALDENBURG,
   ARLESHEIM;
 
+  /**
+   * Returns the sort order of the enum.
+   *
+   * @return the sort order
+   */
   public int getSortOrder() {
     return switch (this) {
       case ARLESHEIM -> 1;

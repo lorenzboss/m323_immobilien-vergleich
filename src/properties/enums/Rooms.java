@@ -1,5 +1,11 @@
 package properties.enums;
 
+/**
+ * Enum for the number of rooms.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public enum Rooms {
   ONE,
   TWO,
@@ -8,6 +14,11 @@ public enum Rooms {
   TOTAL,
   FIVE_PLUS;
 
+    /**
+     * Returns the sort order of the enum.
+     *
+     * @return the sort order
+     */
   public int getSortOrder() {
     return switch (this) {
       case ONE -> 1;
