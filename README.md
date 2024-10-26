@@ -18,10 +18,9 @@ Es wurde dabei kein Maven benutzt, die Gson-Library wurde direkt über IntelliJ 
 
 1. Laden Sie das Projekt herunter oder klonen Sie das Projekt von GitHub.
 2. Öffnen Sie das Projekt in IntelliJ IDEA.
-3. Gson-Library überprüfen:
-    4. Die Gson-Library sollte bereits über IntelliJ als Projekt-Library erkannt werden.
-    5. Wenn nicht, fügen Sie die Library hinzu, indem Sie auf `Project Structure` gehen und dann auf `Libraries`. Klicken Sie auf das "+"-Symbol und
-       wählen Sie die Library in dem `/lib` Ordner aus.
+4. Die Gson-Library sollte bereits über IntelliJ als Projekt-Library erkannt werden.
+5. Wenn nicht, fügen Sie die Library hinzu, indem Sie auf `Project Structure` gehen und dann auf `Libraries`. Klicken Sie auf das "+"-Symbol und
+   wählen Sie die Library in dem `/lib` Ordner aus.
 6. Wählen Sie die Main-Klasse `Main.java` in dem `/src` Ordner aus.
 7. Klicken Sie auf das grüne Play-Symbol neben der Main-Klasse, um das Projekt auszuführen.
 
