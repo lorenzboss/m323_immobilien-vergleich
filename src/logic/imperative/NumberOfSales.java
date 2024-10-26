@@ -5,13 +5,29 @@ import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
+/**
+ * This class is responsible for calculating the number of sales in different ways.
+ *
+ * @author Leandro Aebi
+ * @version 1.0
+ */
 public class NumberOfSales {
 
+  /**
+   * Calculates the number of sales.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSales(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of properties sold: " + propertyList.size());
   }
 
+  /**
+   * Calculates the number of sales per district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per district: ");
@@ -39,6 +55,11 @@ public class NumberOfSales {
     }
   }
 
+  /**
+   * Calculates the number of sales per rooms.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per rooms: ");
@@ -63,6 +84,11 @@ public class NumberOfSales {
     }
   }
 
+  /**
+   * Calculates the number of sales per year.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYear(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year: ");
@@ -86,6 +112,11 @@ public class NumberOfSales {
     }
   }
 
+  /**
+   * Calculates the number of sales per year and rooms.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYearRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and number of rooms: ");
@@ -129,6 +160,11 @@ public class NumberOfSales {
     }
   }
 
+  /**
+   * Calculates the number of sales per year and district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and district: ");

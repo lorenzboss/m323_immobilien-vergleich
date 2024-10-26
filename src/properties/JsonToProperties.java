@@ -21,13 +21,13 @@ import properties.enums.Rooms;
  */
 public class JsonToProperties {
 
-    /**
-     * Converts a json file to a list of properties.
-     *
-     * @param filePath the path to the json file
-     * @return the list of properties
-     * @throws IOException if the file is not found
-     */
+  /**
+   * Converts a json file to a list of properties.
+   *
+   * @param filePath the path to the json file
+   * @return the list of properties
+   * @throws IOException if the file is not found
+   */
   public static List<Property> convertJsonToProperties(String filePath) throws IOException {
     GsonBuilder gsonBuilder = new GsonBuilder();
     gsonBuilder.registerTypeAdapter(District.class, new DistrictDeserializer());

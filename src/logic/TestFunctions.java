@@ -4,7 +4,18 @@ import java.util.List;
 import properties.Property;
 import properties.enums.Rooms;
 
+/**
+ * This class executes all logic methods once for the functional and once for the imperative logic.
+ *
+ * @author Lorenz Boss
+ * @version 1.0
+ */
 public class TestFunctions {
+  /**
+   * Executes all logic methods once for the functional and once for the imperative logic.
+   *
+   * @param propertyList the list of properties
+   */
   public static void testFunction(List<Property> propertyList) {
     logic.functional.PropertiesInfo.propertiesInfo(propertyList, 5);
     logic.functional.PropertiesInfo.propertiesInfoCompact(propertyList, 5);

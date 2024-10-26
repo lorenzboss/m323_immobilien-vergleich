@@ -5,7 +5,20 @@ import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
+/**
+ * This class is responsible for calculating the price development between properties.
+ *
+ * @author Leandro Aebi
+ * @version 1.0
+ */
 public class PriceDevelopment {
+  /**
+   * Calculates the price development per district between two years.
+   *
+   * @param propertyList the list of properties
+   * @param yearA the first year
+   * @param yearB the second year
+   */
   public static void priceDevelopmentPerDistrict(
       List<Property> propertyList, int yearA, int yearB) {
     System.out.println("\n\n");
@@ -66,6 +79,13 @@ public class PriceDevelopment {
     }
   }
 
+  /**
+   * Calculates the price development per number of rooms between two years.
+   *
+   * @param propertyList the list of properties
+   * @param yearA the first year
+   * @param yearB the second year
+   */
   public static void priceDevelopmentPerNumberOfRooms(
       List<Property> propertyList, int yearA, int yearB) {
     System.out.println("\n\n");

@@ -5,8 +5,19 @@ import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
+/**
+ * This class is responsible for calculating the average price of properties.
+ *
+ * @author Leandro
+ * @version 1.0
+ */
 public class AveragePrice {
 
+  /**
+   * Calculates the average price per number of rooms.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerNumberOfRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per number of rooms");
@@ -40,6 +51,11 @@ public class AveragePrice {
     }
   }
 
+  /**
+   * Calculates the average price per year.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerYear(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per year for properties.");
@@ -68,6 +84,11 @@ public class AveragePrice {
     }
   }
 
+  /**
+   * Calculates the average price per year and district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per year and district");
