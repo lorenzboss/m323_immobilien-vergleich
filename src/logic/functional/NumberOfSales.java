@@ -95,7 +95,6 @@ public class NumberOfSales {
                 Collectors.groupingBy(
                     Property::year, Collectors.groupingBy(Property::rooms, Collectors.counting())));
 
-    // Print header row
     System.out.print("Year");
     data.values().stream()
         .flatMap(map -> map.keySet().stream())
@@ -104,7 +103,6 @@ public class NumberOfSales {
         .forEach(rooms -> System.out.printf("%11s", rooms));
     System.out.println();
 
-    // Print each row
     data.entrySet().stream()
         .sorted(Map.Entry.comparingByKey())
         .forEach(
