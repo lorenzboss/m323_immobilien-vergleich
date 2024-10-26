@@ -41,7 +41,7 @@ public class PrintPriceDifference {
     }
   }
 
-  public static void printPriceDifference(
+  private static void printPriceDifference(
       List<Property> propertyList,
       LogicOption logicOption,
       Rooms roomsA,
@@ -57,7 +57,7 @@ public class PrintPriceDifference {
     }
   }
 
-  public static void printPriceDifferenceByYear(
+  private static void printPriceDifferenceByYear(
       List<Property> propertyList, LogicOption logicOption, Rooms roomsA, Rooms roomsB) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PriceDifference.priceDifferencePerYear(propertyList, roomsA, roomsB);
@@ -66,7 +66,7 @@ public class PrintPriceDifference {
     }
   }
 
-  public static void printPriceDifferenceByDistrict(
+  private static void printPriceDifferenceByDistrict(
       List<Property> propertyList, LogicOption logicOption, Rooms roomsA, Rooms roomsB) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PriceDifference.priceDifferencePerDistrict(propertyList, roomsA, roomsB);

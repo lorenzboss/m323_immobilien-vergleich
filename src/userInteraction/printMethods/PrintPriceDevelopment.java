@@ -32,7 +32,7 @@ public class PrintPriceDevelopment {
     }
   }
 
-  public static void printPriceDevelopment(
+  private static void printPriceDevelopment(
       List<Property> propertyList,
       LogicOption logicOption,
       int yearA,
@@ -48,7 +48,7 @@ public class PrintPriceDevelopment {
     }
   }
 
-  public static void printPriceDevelopmentByDistrict(
+  private static void printPriceDevelopmentByDistrict(
       List<Property> propertyList, LogicOption logicOption, int yearA, int yearB) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PriceDevelopment.priceDevelopmentPerDistrict(propertyList, yearA, yearB);
@@ -57,7 +57,7 @@ public class PrintPriceDevelopment {
     }
   }
 
-  public static void printPriceDevelopmentByRooms(
+  private static void printPriceDevelopmentByRooms(
       List<Property> propertyList, LogicOption logicOption, int yearA, int yearB) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PriceDevelopment.priceDevelopmentPerNumberOfRooms(

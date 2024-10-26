@@ -32,7 +32,7 @@ public class PrintAveragePrice {
     }
   }
 
-  public static void printAveragePrice(
+  private static void printAveragePrice(
       List<Property> propertyList,
       boolean perYear,
       boolean perYearDistrict,
@@ -49,7 +49,7 @@ public class PrintAveragePrice {
     }
   }
 
-  public static void printAveragePricePerYearDistrict(
+  private static void printAveragePricePerYearDistrict(
       List<Property> propertyList, LogicOption logicOption) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.AveragePrice.averagePricePerYearDistrict(propertyList);
@@ -58,7 +58,7 @@ public class PrintAveragePrice {
     }
   }
 
-  public static void printAveragePricePerYear(
+  private static void printAveragePricePerYear(
       List<Property> propertyList, LogicOption logicOption) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.AveragePrice.averagePricePerYear(propertyList);
@@ -67,7 +67,7 @@ public class PrintAveragePrice {
     }
   }
 
-  public static void printAveragePricePerNumberOfRooms(
+  private static void printAveragePricePerNumberOfRooms(
       List<Property> propertyList, LogicOption logicOption) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.AveragePrice.averagePricePerNumberOfRooms(propertyList);
