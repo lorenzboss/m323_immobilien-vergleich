@@ -25,7 +25,7 @@ Es wurde dabei kein Maven benutzt, die Gson-Library wurde direkt über IntelliJ 
 **Hinweis: Dieses Projekt ist speziell für IntelliJ konfiguriert. Die Abhängigkeiten werden möglicherweise nicht korrekt erkannt, wenn das Projekt in einer anderen Entwicklungsumgebung ausgeführt wird.**
 
 ## Output
-Da wir so viele variationen unserer Funktionen bzw. Methoden haben, haben wir uns dazu entschieden nicht ganz alle Variationen hier im Output zu zeigen.
+Da wir so viele Variationen unserer Funktionen bzw. Methoden haben, haben wir uns dazu entschieden, nicht ganz alle Variationen hier im Output zu zeigen. 
 Alle Funktionen werden 2 Mal mit unterschiedlichen Variationen ausgeführt, jeweils einmal funktional und einmal imperativ.
 
 ### Output v1 - Imperative Logik
