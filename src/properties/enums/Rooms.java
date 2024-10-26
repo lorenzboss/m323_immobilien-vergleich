@@ -14,11 +14,11 @@ public enum Rooms {
   TOTAL,
   FIVE_PLUS;
 
-    /**
-     * Returns the sort order of the enum.
-     *
-     * @return the sort order
-     */
+  /**
+   * Returns the sort order of the enum.
+   *
+   * @return the sort order
+   */
   public int getSortOrder() {
     return switch (this) {
       case ONE -> 1;

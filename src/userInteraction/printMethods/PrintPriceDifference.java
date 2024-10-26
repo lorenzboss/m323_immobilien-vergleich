@@ -15,12 +15,12 @@ import userInteraction.LogicOption;
  */
 public class PrintPriceDifference {
 
-    /**
-     * Starts the user interaction and asks for the params.
-     *
-     * @param propertyList the list of properties
-     * @param logicOption the logic option
-     */
+  /**
+   * Starts the user interaction and asks for the params.
+   *
+   * @param propertyList the list of properties
+   * @param logicOption the logic option
+   */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     System.out.println("Here you can compare the price difference between two number of rooms.");
     System.out.println("Please enter the first number of rooms (the more expensive one).");

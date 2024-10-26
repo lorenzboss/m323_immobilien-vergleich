@@ -74,11 +74,11 @@ public class HelperMethods {
     }
   }
 
-    /**
-     * Asks the user for the number of rooms.
-     *
-     * @return the number of rooms
-     */
+  /**
+   * Asks the user for the number of rooms.
+   *
+   * @return the number of rooms
+   */
   public static Rooms askForNumberOfRooms() {
     while (true) {
       System.out.print("Choose between '1', '2', '3', '4', '5' (5+ Rooms), 't' (Total): ");
