@@ -14,6 +14,12 @@ import userInteraction.LogicOption;
  * @version 1.0
  */
 public class PrintHighestPrice {
+
+  /** Starts the process of printing the highest price of the properties.
+   *
+   * @param propertyList the list of properties
+   * @param logicOption the logic option
+   */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     boolean priceOnly =
         askYesNoQuestion("Do you only want to print out the price of the properties? (y/n): ");

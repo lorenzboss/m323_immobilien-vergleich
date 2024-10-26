@@ -11,6 +11,7 @@ import properties.enums.Rooms;
  * @version 1.0
  */
 public class TestFunctions {
+
   /**
    * Executes all logic methods once for the functional and once for the imperative logic.
    *

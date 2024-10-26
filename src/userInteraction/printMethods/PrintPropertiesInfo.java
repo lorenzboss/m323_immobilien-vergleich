@@ -16,7 +16,7 @@ import userInteraction.LogicOption;
 public class PrintPropertiesInfo {
 
   /**
-   * Starts the user interaction and asks for the params.
+   * Starts the process of printing the properties info in a compact or normal form.
    *
    * @param propertyList the list of properties
    * @param logicOption the logic option

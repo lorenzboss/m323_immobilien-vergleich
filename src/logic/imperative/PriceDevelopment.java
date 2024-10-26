@@ -12,6 +12,7 @@ import properties.enums.Rooms;
  * @version 1.0
  */
 public class PriceDevelopment {
+
   /**
    * Calculates the price development per district between two years.
    *

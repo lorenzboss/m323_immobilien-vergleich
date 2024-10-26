@@ -10,6 +10,7 @@ import properties.Property;
  * @version 1.0
  */
 public class PropertiesInfo {
+
   /**
    * Prints the properties in the normal format.
    *

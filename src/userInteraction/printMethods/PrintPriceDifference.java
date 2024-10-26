@@ -16,7 +16,7 @@ import userInteraction.LogicOption;
 public class PrintPriceDifference {
 
   /**
-   * Starts the user interaction and asks for the params.
+   * Starts the process of printing the price difference between two numbers of rooms.
    *
    * @param propertyList the list of properties
    * @param logicOption the logic option

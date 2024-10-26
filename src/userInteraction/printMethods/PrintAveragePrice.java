@@ -13,6 +13,13 @@ import userInteraction.LogicOption;
  * @version 1.0
  */
 public class PrintAveragePrice {
+
+    /**
+     * Starts the process of printing the average price of the properties.
+     *
+     * @param propertyList the list of properties
+     * @param logicOption the logic option
+     */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
 
     System.out.println("You can filter by year, district, or rooms.");

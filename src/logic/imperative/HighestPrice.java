@@ -12,6 +12,7 @@ import properties.Property;
  * @version 1.0
  */
 public class HighestPrice {
+
   /**
    * Calculates the price of the most expensive properties.
    *

@@ -13,6 +13,13 @@ import userInteraction.LogicOption;
  * @version 1.0
  */
 public class PrintPriceDevelopment {
+
+  /**
+   * Starts the process of printing the price development between two years.
+   *
+   * @param propertyList the list of properties
+   * @param logicOption the logic option
+   */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     System.out.println("Here you can get the price development between two years (2011-2023).");
     int yearA = askForInt("Please enter the first year: ", 2023, 2011);
