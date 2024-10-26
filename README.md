@@ -10,25 +10,39 @@ Es ist ein Java-Projekt, erstellt mit OpenJDK 22 und der Gson-Library zur JSON-V
 Es wurde dabei kein Maven benutzt, die Gson-Library wurde direkt über IntelliJ hinzugefügt und befindet sich im Ordner `/lib`.
 
 ## Voraussetzungen
-* Java Development Kit (JDK) 22 
+
+* Java Development Kit (JDK) 22
 * IntelliJ IDEA (zum Ausführen des Projekts erforderlich)
 
 ## Ausführen des Projekts
+
 1. Laden Sie das Projekt herunter oder klonen Sie das Projekt von GitHub.
 2. Öffnen Sie das Projekt in IntelliJ IDEA.
 3. Gson-Library überprüfen:
-   4. Die Gson-Library sollte bereits über IntelliJ als Projekt-Library erkannt werden.
-   5. Wenn nicht, fügen Sie die Library hinzu, indem Sie auf `Project Structure` gehen und dann auf `Libraries`. Klicken Sie auf das "+"-Symbol und wählen Sie die Library in dem `/lib` Ordner aus.
+    4. Die Gson-Library sollte bereits über IntelliJ als Projekt-Library erkannt werden.
+    5. Wenn nicht, fügen Sie die Library hinzu, indem Sie auf `Project Structure` gehen und dann auf `Libraries`. Klicken Sie auf das "+"-Symbol und
+       wählen Sie die Library in dem `/lib` Ordner aus.
 6. Wählen Sie die Main-Klasse `Main.java` in dem `/src` Ordner aus.
 7. Klicken Sie auf das grüne Play-Symbol neben der Main-Klasse, um das Projekt auszuführen.
 
-**Hinweis: Dieses Projekt ist speziell für IntelliJ konfiguriert. Die Abhängigkeiten werden möglicherweise nicht korrekt erkannt, wenn das Projekt in einer anderen Entwicklungsumgebung ausgeführt wird.**
+**Hinweis: Dieses Projekt ist speziell für IntelliJ konfiguriert. Die Abhängigkeiten werden möglicherweise nicht korrekt erkannt, wenn das Projekt in
+einer anderen Entwicklungsumgebung ausgeführt wird.**
+
+## TestFunctions
+
+Die Klasse TestFunctions führt alle Methoden einmal imperativ und einmal funktional aus.
+Diese Klasse ist hilfreich, wenn man den Output der funktionalen und der imperativen Methoden vergleichen möchte.
+Um die Klasse zu benutzen, muss man lediglich den auskommentierten Code in der Main-Klasse benutzen.
+Zusätzlich sollte man den Star-Befehl der Konsolenapplikation auskommentieren, um den Überblick über den Output zu behalten.
 
 ## Output
-Da wir so viele Variationen unserer Funktionen bzw. Methoden haben, haben wir uns dazu entschieden, nicht ganz alle Variationen hier im Output zu zeigen. 
+
+Da wir so viele Variationen unserer Funktionen bzw. Methoden haben, haben wir uns dazu entschieden, nicht ganz alle Variationen hier im Output zu
+zeigen.
 Alle Funktionen werden 2 Mal mit unterschiedlichen Variationen ausgeführt, jeweils einmal funktional und einmal imperativ.
 
 ### Output v1 - Imperative Logik
+
 ```
 Welcome to the Property Comparator!
 We have 355 properties in our database.
@@ -406,7 +420,9 @@ Exiting the program...
 
 Process finished with exit code 0
 ```
+
 ### Output v2 - Funktionale Logik
+
 ```
 Welcome to the Property Comparator!
 We have 355 properties in our database.
