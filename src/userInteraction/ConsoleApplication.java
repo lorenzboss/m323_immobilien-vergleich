@@ -41,6 +41,7 @@ public class ConsoleApplication {
 
   private static void chooseFunction(LogicOption logicOption, List<Property> propertyList) {
     while (true) {
+      System.out.println();
       System.out.println("1. Print all properties");
       System.out.println("2. Print the number of sales");
       System.out.println("3. Print the most expensive properties");

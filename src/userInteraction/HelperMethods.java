@@ -63,10 +63,10 @@ public class HelperMethods {
       char userInput = scanner.next().charAt(0);
 
       if (userInput == 'f') {
-        System.out.println("You have selected the functional logic.\n");
+        System.out.println("You have selected the functional logic.");
         return LogicOption.FUNCTIONAL;
       } else if (userInput == 'i') {
-        System.out.println("You have selected the imperative logic.\n");
+        System.out.println("You have selected the imperative logic.");
         return LogicOption.IMPERATIVE;
       } else {
         System.out.println("Invalid option\n");
