@@ -14,7 +14,8 @@ import userInteraction.LogicOption;
  */
 public class PrintNumberOfSales {
 
-  /** Starts the process of printing the number of sales.
+  /**
+   * Starts the process of printing the number of sales.
    *
    * @param propertyList the list of properties
    * @param logicOption the logic option

@@ -15,7 +15,8 @@ import userInteraction.LogicOption;
  */
 public class PrintHighestPrice {
 
-  /** Starts the process of printing the highest price of the properties.
+  /**
+   * Starts the process of printing the highest price of the properties.
    *
    * @param propertyList the list of properties
    * @param logicOption the logic option
