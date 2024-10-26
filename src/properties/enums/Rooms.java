@@ -27,7 +27,6 @@ public enum Rooms {
       case FOUR -> 4;
       case TOTAL -> 5;
       case FIVE_PLUS -> 6;
-      default -> Integer.MAX_VALUE;
     };
   }
 }

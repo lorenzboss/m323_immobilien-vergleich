@@ -25,7 +25,7 @@ public class PriceDifference {
     System.out.println("\n\n");
     System.out.println("Price difference per year between " + roomsA + " and " + roomsB);
 
-    // Dynamischer Jahrbereich
+    // Dynamischer Jahres-Bereich
     int startYear = Integer.MAX_VALUE;
     int endYear = Integer.MIN_VALUE;
 
@@ -92,8 +92,7 @@ public class PriceDifference {
       priceDifferences.add(new AbstractMap.SimpleEntry<>(district, difference));
     }
 
-    Collections.sort(
-        priceDifferences, (entry1, entry2) -> Double.compare(entry2.getValue(), entry1.getValue()));
+    priceDifferences.sort((entry1, entry2) -> Double.compare(entry2.getValue(), entry1.getValue()));
 
     for (Map.Entry<District, Double> entry : priceDifferences) {
       System.out.printf(

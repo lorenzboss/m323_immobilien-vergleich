@@ -25,7 +25,6 @@ public enum District {
       case LIESTAL -> 3;
       case SISSACH -> 4;
       case WALDENBURG -> 5;
-      default -> Integer.MAX_VALUE;
     };
   }
 }
