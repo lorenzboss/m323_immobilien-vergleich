@@ -22,8 +22,8 @@ public class PrintPriceDevelopment {
    */
   public static void start(List<Property> propertyList, LogicOption logicOption) {
     System.out.println("Here you can get the price development between two years (2011-2023).");
-    int yearA = askForInt("Please enter the first year: ", 2023, 2011);
-    int yearB = askForInt("Please enter the second year: ", 2023, 2011);
+    int yearA = askForInt("Please enter the first year (the smaller year): ", 2023, 2011);
+    int yearB = askForInt("Please enter the second year: (the greater year) ", 2023, 2011);
 
     if (yearA >= yearB) {
       System.out.println("Please make sure that the second year is greater than the first year.");
