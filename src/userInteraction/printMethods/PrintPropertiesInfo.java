@@ -33,14 +33,14 @@ public class PrintPropertiesInfo {
   private static void printPropertiesInfo(
       List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
     if (compactForm) {
-      printPropertiesInfoCompactForm(propertyList, logicOption, compactForm, limit);
+      printPropertiesInfoCompactForm(propertyList, logicOption, limit);
     } else {
-      printPropertiesInfoForm(propertyList, logicOption, compactForm, limit);
+      printPropertiesInfoForm(propertyList, logicOption, limit);
     }
   }
 
   private static void printPropertiesInfoCompactForm(
-      List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
+      List<Property> propertyList, LogicOption logicOption, Integer limit) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PropertiesInfo.propertiesInfoCompact(propertyList, limit);
     } else {
@@ -49,7 +49,7 @@ public class PrintPropertiesInfo {
   }
 
   private static void printPropertiesInfoForm(
-      List<Property> propertyList, LogicOption logicOption, boolean compactForm, Integer limit) {
+      List<Property> propertyList, LogicOption logicOption, Integer limit) {
     if (logicOption == LogicOption.FUNCTIONAL) {
       logic.functional.PropertiesInfo.propertiesInfo(propertyList, limit);
     } else {
