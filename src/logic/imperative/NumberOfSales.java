@@ -20,7 +20,14 @@ public class NumberOfSales {
    */
   public static void numberOfSales(List<Property> propertyList) {
     System.out.println("\n\n");
-    System.out.println("Number of properties sold: " + propertyList.size());
+    System.out.print("Number of properties sold: ");
+
+    int count = 0;
+    for (Property property : propertyList) {
+      count++;
+    }
+
+    System.out.println(count);
   }
 
   /**
