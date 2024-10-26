@@ -57,11 +57,23 @@ public class PrintNumberOfSales {
   private static void printNumberOfSalesPerYear(
       List<Property> propertyList, boolean perDistrict, boolean perRooms, LogicOption logicOption) {
     if (perDistrict) {
-      logic.functional.NumberOfSales.numberOfSalesPerYearDistrict(propertyList);
+      if (logicOption == LogicOption.FUNCTIONAL) {
+        logic.functional.NumberOfSales.numberOfSalesPerYearDistrict(propertyList);
+      } else {
+        logic.imperative.NumberOfSales.numberOfSalesPerYearDistrict(propertyList);
+      }
     } else if (perRooms) {
-      logic.functional.NumberOfSales.numberOfSalesPerYearRooms(propertyList);
+      if (logicOption == LogicOption.FUNCTIONAL) {
+        logic.functional.NumberOfSales.numberOfSalesPerYearRooms(propertyList);
+      } else {
+        logic.imperative.NumberOfSales.numberOfSalesPerYearRooms(propertyList);
+      }
     } else {
-      logic.functional.NumberOfSales.numberOfSalesPerYear(propertyList);
+      if (logicOption == LogicOption.FUNCTIONAL) {
+        logic.functional.NumberOfSales.numberOfSalesPerYear(propertyList);
+      } else {
+        logic.imperative.NumberOfSales.numberOfSalesPerYear(propertyList);
+      }
     }
   }
 
