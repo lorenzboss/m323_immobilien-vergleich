@@ -7,7 +7,7 @@ import properties.enums.Rooms;
  * This class contains helper methods for user interaction.
  *
  * @author Lorenz Boss
- * @version 1.0
+ * @version 2.0
  */
 public class HelperMethods {
   private static final Scanner scanner = new Scanner(System.in);
@@ -74,6 +74,11 @@ public class HelperMethods {
     }
   }
 
+    /**
+     * Asks the user for the number of rooms.
+     *
+     * @return the number of rooms
+     */
   public static Rooms askForNumberOfRooms() {
     while (true) {
       System.out.print("Choose between '1', '2', '3', '4', '5' (5+ Rooms), 't' (Total): ");

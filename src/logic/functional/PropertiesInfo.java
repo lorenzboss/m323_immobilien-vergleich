@@ -3,7 +3,20 @@ package logic.functional;
 import java.util.List;
 import properties.Property;
 
+/**
+ * This class is responsible for printing the properties in different formats.
+ *
+ * @author Lorenz Boss
+ * @version 2.0
+ */
 public class PropertiesInfo {
+
+  /**
+   * Prints the properties in the normal format.
+   *
+   * @param propertyList the list of properties
+   * @param limit the number of properties to print
+   */
   public static void propertiesInfo(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(
@@ -20,6 +33,12 @@ public class PropertiesInfo {
             });
   }
 
+  /**
+   * Prints the properties in a compact format.
+   *
+   * @param propertyList the list of properties
+   * @param limit the number of properties to print
+   */
   public static void propertiesInfoCompact(List<Property> propertyList, Integer limit) {
     System.out.println("\n\n");
     System.out.println(

@@ -7,12 +7,29 @@ import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
+/**
+ * This class is responsible for calculating the number of sales in different formats.
+ *
+ * @author Lorenz Boss
+ * @version 2.0
+ */
 public class NumberOfSales {
+
+  /**
+   * Prints the number of properties sold.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSales(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of properties sold: " + propertyList.size());
   }
 
+  /**
+   * Prints the number of sales per district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per district: ");
@@ -26,6 +43,11 @@ public class NumberOfSales {
                 System.out.printf("District: %-10s Sales: %d%n", entry.getKey(), entry.getValue()));
   }
 
+  /**
+   * Prints the number of sales per rooms.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per rooms: ");
@@ -40,6 +62,11 @@ public class NumberOfSales {
                 System.out.printf("Rooms: %-10s Sales: %d%n", entry.getKey(), entry.getValue()));
   }
 
+  /**
+   * Prints the number of sales per year.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYear(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year: ");
@@ -53,6 +80,11 @@ public class NumberOfSales {
                 System.out.printf("%d: Sold properties: %d%n", entry.getKey(), entry.getValue()));
   }
 
+  /**
+   * Prints the number of sales per year and rooms.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYearRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and number of rooms: ");
@@ -88,6 +120,11 @@ public class NumberOfSales {
             });
   }
 
+  /**
+   * Prints the number of sales per year and district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void numberOfSalesPerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Number of sales per year and district: ");

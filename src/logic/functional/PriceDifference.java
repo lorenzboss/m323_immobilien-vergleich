@@ -6,7 +6,21 @@ import properties.Property;
 import properties.enums.District;
 import properties.enums.Rooms;
 
+/**
+ * This class is responsible for calculating the price difference between properties.
+ *
+ * @author Lorenz Boss
+ * @version 2.0
+ */
 public class PriceDifference {
+
+  /**
+   * Calculates the price difference per year between two different room types.
+   *
+   * @param propertyList the list of properties
+   * @param roomsA the first room type
+   * @param roomsB the second room type
+   */
   public static void priceDifferencePerYear(
       List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");
@@ -38,6 +52,13 @@ public class PriceDifference {
         });
   }
 
+  /**
+   * Calculates the price difference per district between two different room types.
+   *
+   * @param propertyList the list of properties
+   * @param roomsA the first room type
+   * @param roomsB the second room type
+   */
   public static void priceDifferencePerDistrict(
       List<Property> propertyList, Rooms roomsA, Rooms roomsB) {
     System.out.println("\n\n");

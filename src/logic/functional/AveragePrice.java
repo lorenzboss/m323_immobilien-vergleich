@@ -5,7 +5,19 @@ import java.util.stream.Collectors;
 import properties.Property;
 import properties.enums.District;
 
+/**
+ * This class is responsible for calculating the average price of properties in different formats.
+ *
+ * @author Lorenz Boss
+ * @version 2.0
+ */
 public class AveragePrice {
+
+  /**
+   * Prints the average price per district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerNumberOfRooms(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per number of rooms");
@@ -20,6 +32,11 @@ public class AveragePrice {
                 System.out.printf("Rooms: %9s, price: %.2f%n", entry.getKey(), entry.getValue()));
   }
 
+  /**
+   * Prints the average price per district.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerYear(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per year for properties.");
@@ -38,6 +55,11 @@ public class AveragePrice {
                     integerDoubleEntry.getKey(), integerDoubleEntry.getValue()));
   }
 
+  /**
+   * Prints the average price per district and year.
+   *
+   * @param propertyList the list of properties
+   */
   public static void averagePricePerYearDistrict(List<Property> propertyList) {
     System.out.println("\n\n");
     System.out.println("Average price per year and district");

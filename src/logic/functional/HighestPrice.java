@@ -6,7 +6,20 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import properties.Property;
 
+/**
+ * This class is responsible for calculating the highest price of properties.
+ *
+ * @author Lorenz Boss
+ * @version 2.0
+ */
 public class HighestPrice {
+
+  /**
+   * Prints the price of the most expensive properties.
+   *
+   * @param propertyList the list of properties
+   * @param limit the number of properties to print
+   */
   public static void mostExpensivePropertiesPrice(List<Property> propertyList, int limit) {
     AtomicInteger index = new AtomicInteger(1);
     System.out.println("\n\n");
@@ -22,6 +35,12 @@ public class HighestPrice {
                 System.out.printf("%3d: selling price CHF: %d%n", index.getAndIncrement(), price));
   }
 
+  /**
+   * Prints the most expensive properties.
+   *
+   * @param propertyList the list of properties
+   * @param limit the number of properties to print
+   */
   public static void mostExpensiveProperties(List<Property> propertyList, int limit) {
     AtomicInteger index = new AtomicInteger(1);
     System.out.println("\n\n");
